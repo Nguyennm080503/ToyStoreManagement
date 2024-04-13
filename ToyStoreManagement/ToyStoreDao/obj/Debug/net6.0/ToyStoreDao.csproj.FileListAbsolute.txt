@@ -1,0 +1,5 @@
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.csproj.AssemblyReference.cache
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.GeneratedMSBuildEditorConfig.editorconfig
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.AssemblyInfoInputs.cache
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.AssemblyInfo.cs
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.csproj.CoreCompileInputs.cache

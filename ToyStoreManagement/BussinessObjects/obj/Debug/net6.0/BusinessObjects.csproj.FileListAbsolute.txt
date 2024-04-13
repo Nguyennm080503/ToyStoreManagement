@@ -1,0 +1,14 @@
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\BussinessObjects\bin\Debug\net6.0\BusinessObjects.deps.json
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\BussinessObjects\bin\Debug\net6.0\BusinessObjects.runtimeconfig.json
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\BussinessObjects\bin\Debug\net6.0\BusinessObjects.dll
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\BussinessObjects\bin\Debug\net6.0\BusinessObjects.pdb
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.csproj.AssemblyReference.cache
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.AssemblyInfoInputs.cache
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.AssemblyInfo.cs
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.csproj.CoreCompileInputs.cache
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.dll
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\refint\BusinessObjects.dll
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.pdb
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.genruntimeconfig.cache
+D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\ref\BusinessObjects.dll
