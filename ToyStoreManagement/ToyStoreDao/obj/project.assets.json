@@ -2302,11 +2302,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj",
+      "projectUniqueName": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj",
       "projectName": "ToyStoreDao",
-      "projectPath": "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj",
+      "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\ToyStoreDao\\obj\\",
+      "outputPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2323,8 +2323,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj": {
-              "projectPath": "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj"
+            "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj": {
+              "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj"
             }
           }
         }

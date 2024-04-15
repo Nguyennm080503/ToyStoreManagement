@@ -2387,11 +2387,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj",
+      "projectUniqueName": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj",
       "projectName": "BusinessObjects",
-      "projectPath": "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj",
+      "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\BussinessObjects\\obj\\",
+      "outputPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+8GrBAe6B2vBVajEkv69pAe3HVpn3ywMfJTPHkMoRNajjPczOpwlQXEVicpIuX2MeYKiXVQb75idpjs8CLFpCw==",
+  "dgSpecHash": "lutZszocdYPMb4NkPSx+K2HO1asZkI2F1VbCw5Io0MEibV+oy8z4ly7da6+1WK8JF/zaqQOqE28ugroeMO94+g==",
   "success": true,
-  "projectFilePath": "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj",
+  "projectFilePath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

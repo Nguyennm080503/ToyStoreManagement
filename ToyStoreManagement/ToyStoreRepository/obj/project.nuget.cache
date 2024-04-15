@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lvcOxqRBDlkR41JuTwstlMdksfBEYxaneTkz4pnyvhRH6CiigZizolJ3N/5wsPPs9TIi4XHdxiPeuVfEFhCMnQ==",
+  "dgSpecHash": "JDr4VNEggbgIIj3cSsPuKSeQ9UPFgmWHPPK4bE5qJEZThJqL7VRbcAsOivKaAKx7NZqdnl+NdBsInupSKUT6CQ==",
   "success": true,
-  "projectFilePath": "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj",
+  "projectFilePath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.7\\microsoft.data.sqlclient.2.1.7.nupkg.sha512",

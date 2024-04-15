@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyStoreManagement", "ToyStoreManagement\ToyStoreManagement.csproj", "{23526748-2BBF-4A07-9FA9-6D6FD733D9B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyStoreManagement", "ToyStoreManagement\ToyStoreManagement.csproj", "{23526748-2BBF-4A07-9FA9-6D6FD733D9B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjects", "BussinessObjects\BusinessObjects.csproj", "{6030FD20-82C5-4FFF-88C2-2C10C8B642D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObjects", "BussinessObjects\BusinessObjects.csproj", "{6030FD20-82C5-4FFF-88C2-2C10C8B642D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyStoreDao", "ToyStoreDao\ToyStoreDao.csproj", "{07D6BEDA-F57E-4548-99E9-159F9D418155}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyStoreDao", "ToyStoreDao\ToyStoreDao.csproj", "{07D6BEDA-F57E-4548-99E9-159F9D418155}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyStoreRepository", "ToyStoreRepository\ToyStoreRepository.csproj", "{63577123-8C34-450A-B30F-015D7AFA7430}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyStoreRepository", "ToyStoreRepository\ToyStoreRepository.csproj", "{63577123-8C34-450A-B30F-015D7AFA7430}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyStoreService", "ToyStoreService\ToyStoreService.csproj", "{2A420FD1-34C8-455D-8952-DCD079188F84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyStoreService", "ToyStoreService\ToyStoreService.csproj", "{2A420FD1-34C8-455D-8952-DCD079188F84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

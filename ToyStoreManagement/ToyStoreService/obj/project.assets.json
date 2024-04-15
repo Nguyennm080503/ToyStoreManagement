@@ -2338,11 +2338,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\ToyStoreService\\ToyStoreService.csproj",
+      "projectUniqueName": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\ToyStoreService.csproj",
       "projectName": "ToyStoreService",
-      "projectPath": "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\ToyStoreService\\ToyStoreService.csproj",
+      "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\ToyStoreService.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\ToyStoreService\\obj\\",
+      "outputPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2359,8 +2359,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj": {
-              "projectPath": "D:\\BT\\Môn\\Kì 7\\PRN221\\Lab\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj"
+            "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj": {
+              "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj"
             }
           }
         }
