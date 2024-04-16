@@ -12,7 +12,8 @@ namespace BusinessObjects.Models
 
         public int OrderId { get; set; }
         public int? CustomerId { get; set; }
-        public DateTime? OrderDate { get; set; }
+		public string? Address { get; set; }
+		public DateTime? OrderDate { get; set; }
         public decimal? TotalAmount { get; set; }
         public int? Status { get; set; }
 

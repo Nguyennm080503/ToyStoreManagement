@@ -50,6 +50,7 @@ GO
 CREATE TABLE Orders (
     OrderID INT IDENTITY(1,1) PRIMARY KEY,
     CustomerID INT FOREIGN KEY REFERENCES Accounts(AccountID),
+	Address NVARCHAR(MAX),
     OrderDate DATETIME,
     TotalAmount DECIMAL(18,2),
 	Status INT
