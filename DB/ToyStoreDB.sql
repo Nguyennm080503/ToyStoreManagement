@@ -83,6 +83,7 @@ GO
 CREATE TABLE Feedback (
     FeedbackID INT IDENTITY(1,1) PRIMARY KEY,
     CustomerID INT FOREIGN KEY REFERENCES Accounts(AccountID),
+	ProductID INT FOREIGN KEY REFERENCES Products(ProductID),
     FeedbackText NVARCHAR(MAX),
     FeedbackDate DATETIME
 );
