@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\BussinessObjects",
-    "\\BussinessObjects\\Models"
+    "\\BussinessObjects\\Models",
+    "\\ToyStoreManagement",
+    "\\ToyStoreManagement\\Pages"
   ],
-  "SelectedNode": "\\BussinessObjects\\Models\\Order.cs",
+  "SelectedNode": "\\ToyStoreManagement\\Pages\\Login.cshtml",
   "PreviewInSolutionExplorer": false
 }

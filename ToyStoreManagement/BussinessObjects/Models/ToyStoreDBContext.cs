@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace BusinessObjects.Models
 {
@@ -24,26 +25,14 @@ namespace BusinessObjects.Models
         public virtual DbSet<ProductReview> ProductReviews { get; set; } = null!;
         public virtual DbSet<ProductUrl> ProductUrls { get; set; } = null!;
 
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(GetConnectionString());
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Server=(local);uid=sa;pwd=12345;database=ToyStoreDB;TrustServerCertificate=True;");
             }
         }
-
-        private static string GetConnectionString()
-        {
-            IConfigurationRoot config = new ConfigurationBuilder()
-                 .SetBasePath(Directory.GetCurrentDirectory())
-                        .AddJsonFile("appsettings.json", true, true)
-                        .Build();
-            var strConn = config["ConnectionStrings:DefaultConnection"];
-
-            return strConn;
-        }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -81,10 +70,17 @@ namespace BusinessObjects.Models
 
                 entity.Property(e => e.FeedbackDate).HasColumnType("datetime");
 
+                entity.Property(e => e.ProductId).HasColumnName("ProductID");
+
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.Feedbacks)
                     .HasForeignKey(d => d.CustomerId)
                     .HasConstraintName("FK__Feedback__Custom__38996AB5");
+
+                entity.HasOne(d => d.Product)
+                    .WithMany(p => p.Feedbacks)
+                    .HasForeignKey(d => d.ProductId)
+                    .HasConstraintName("FK__Feedback__Produc__398D8EEE");
             });
 
             modelBuilder.Entity<Order>(entity =>
@@ -143,7 +139,7 @@ namespace BusinessObjects.Models
             modelBuilder.Entity<ProductReview>(entity =>
             {
                 entity.HasKey(e => e.ReviewId)
-                    .HasName("PK__ProductR__74BC79AE55EA5313");
+                    .HasName("PK__ProductR__74BC79AEA91ED8C2");
 
                 entity.Property(e => e.ReviewId).HasColumnName("ReviewID");
 

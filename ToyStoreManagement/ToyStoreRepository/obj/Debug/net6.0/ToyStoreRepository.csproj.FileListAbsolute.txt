@@ -3,3 +3,21 @@ D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6
 D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.AssemblyInfoInputs.cache
 D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.AssemblyInfo.cs
 D:\BT\Môn\Kì 7\PRN221\Lab\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.csproj.CoreCompileInputs.cache
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreRepository.deps.json
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreRepository.dll
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreRepository.pdb
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\BusinessObjects.dll
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreDao.dll
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreDao.pdb
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\BusinessObjects.pdb
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.csproj.AssemblyReference.cache
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.AssemblyInfoInputs.cache
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.AssemblyInfo.cs
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.csproj.CoreCompileInputs.cache
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.sourcelink.json
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.csproj.CopyComplete
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.dll
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\refint\ToyStoreRepository.dll
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.pdb
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ref\ToyStoreRepository.dll

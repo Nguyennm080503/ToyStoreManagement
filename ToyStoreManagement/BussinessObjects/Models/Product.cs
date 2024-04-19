@@ -7,6 +7,7 @@ namespace BusinessObjects.Models
     {
         public Product()
         {
+            Feedbacks = new HashSet<Feedback>();
             OrderDetails = new HashSet<OrderDetail>();
             ProductReviews = new HashSet<ProductReview>();
             ProductUrls = new HashSet<ProductUrl>();
@@ -22,6 +23,7 @@ namespace BusinessObjects.Models
         public int? Status { get; set; }
 
         public virtual Category? Category { get; set; }
+        public virtual ICollection<Feedback> Feedbacks { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
         public virtual ICollection<ProductReview> ProductReviews { get; set; }
         public virtual ICollection<ProductUrl> ProductUrls { get; set; }
