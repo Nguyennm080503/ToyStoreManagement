@@ -5,6 +5,6 @@ namespace ToyStoreDao
     public class OrderDao : BaseToyStoreDao<Order>
     {
         private readonly ToyStoreDBContext _dbContext;
-        public OrderDao(ToyStoreDBContext dBContext) { _dbContext = dBContext; }
+        public OrderDao() { _dbContext = new ToyStoreDBContext(); }
     }
 }

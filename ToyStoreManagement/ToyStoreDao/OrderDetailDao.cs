@@ -6,6 +6,6 @@ namespace ToyStoreDao
     internal class OrderDetailDao
     {
         private readonly ToyStoreDBContext _dbContext;
-        public OrderDetailDao(ToyStoreDBContext dBContext) { _dbContext = dBContext; }
+        public OrderDetailDao() { _dbContext = new ToyStoreDBContext(); }
     }
 }
