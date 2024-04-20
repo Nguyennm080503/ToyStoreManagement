@@ -6,7 +6,11 @@ namespace ToyStoreDao
     public class AccountDao : BaseToyStoreDao<Account>
     {
         private readonly ToyStoreDBContext _dbContext;
-        public AccountDao(ToyStoreDBContext dBContext) { _dbContext = dBContext; }
+        public AccountDao() { _dbContext = new ToyStoreDBContext(); }
 
+        public Account GetAccountByUsername(string username)
+        {
+            return _dbContext.Accounts.FirstOrDefault(x => x.Username == username);
+        }
     }
 }
