@@ -16,5 +16,10 @@ namespace ToyStoreRepository.Implement
 		{
 			return _accountDao.GetAccountByUsername(username);
 		}
+
+		public bool RegisterNewAccount(Account account)
+		{
+			return _accountDao.Create(account);
+		}
 	}
 }

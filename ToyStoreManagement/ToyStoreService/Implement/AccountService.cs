@@ -19,5 +19,10 @@ namespace ToyStoreService.Implement
 		{
 			return _accountRepository.GetAccountByUsername(username);
 		}
+
+		public bool RegisterNewAccount(Account account)
+		{
+			return _accountRepository.RegisterNewAccount(account);
+		}
 	}
 }
