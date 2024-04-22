@@ -24,5 +24,20 @@ namespace ToyStoreService.Implement
 		{
 			return _accountRepository.RegisterNewAccount(account);
 		}
-	}
+
+		public Account GetAccountByEmail(string email)
+		{
+			return _accountRepository.GetAccountByEmail(email);
+		}
+
+        public IEnumerable<Account> GetAllCustomerAccounts()
+        {
+            return _accountRepository.GetAllCustomerAccounts();
+        }
+
+        public IEnumerable<Account> GetAllStaffAccounts()
+        {
+            return _accountRepository.GetAllStaffAccounts();
+        }
+    }
 }

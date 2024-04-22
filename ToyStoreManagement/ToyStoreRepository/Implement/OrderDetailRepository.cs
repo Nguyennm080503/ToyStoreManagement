@@ -2,7 +2,7 @@
 
 namespace ToyStoreRepository.Implement
 {
-    public interface OrderDetailRepository : IOrderDetailRepository
+    public class OrderDetailRepository : IOrderDetailRepository
     {
     }
 }

@@ -1,0 +1,69 @@
+﻿@page
+@model ToyStoreManagement.Pages.StaffsModel
+@{
+    ViewData["Tittle"] = "Account Management";
+}
+@using Microsoft.AspNetCore.Http
+@{
+    var session = HttpContext.Session;
+    var name = session.GetString("Name");
+    var roleId = session.GetInt32("RoleId");
+    var accountId = session.GetInt32("AccountId");
+}
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var account in Model.Accounts)
+                    {
+                        <tr>
+                            <td>@account.AccountId</td>
+                            <td>@account.Name</td>
+                            <td>@account.Username</td>
+                            <td>@account.Email</td>
+                            <td>@account.Address</td>
+                            <td>
+                                @if (account.Status == 1)
+                                {
+                                    <p style="color:green">Active</p>
+                                }
+                                else
+                                {
+                                    <p style="color:red">Active</p>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/jquery.dataTables.min.js"></script>
+<script src="~/js/dataTables.bootstrap4.min.js"></script>
+
