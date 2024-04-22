@@ -17,14 +17,14 @@ namespace ToyStoreManagement.Pages
         public async Task<IActionResult> OnGet()
         {
             var roleId = HttpContext.Session.GetInt32("RoleId");
-            if (roleId != 1 || roleId != 2)
-            {
-                return RedirectToPage("/Login");
-            }
-            else
+            if (roleId == 1 || roleId == 2)
             {
                 Accounts = _accountService.GetAllStaffAccounts();
                 return Page();
+            }
+            else
+            {
+                return RedirectToPage("/Login");
             }
         }
     }

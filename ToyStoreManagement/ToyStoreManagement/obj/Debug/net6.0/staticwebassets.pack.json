@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
       "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
     },
@@ -65,8 +69,16 @@
       "PackagePath": "staticwebassets\\js\\dataTables.bootstrap4.min.js"
     },
     {
+      "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\datatables-demo.js",
+      "PackagePath": "staticwebassets\\js\\datatables-demo.js"
+    },
+    {
       "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\jquery.dataTables.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\jquery.easing.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.easing.min.js"
     },
     {
       "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\jquery.min.js",
@@ -79,6 +91,10 @@
     {
       "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\popper.js",
       "PackagePath": "staticwebassets\\js\\popper.js"
+    },
+    {
+      "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\sb-admin-2.min.js",
+      "PackagePath": "staticwebassets\\js\\sb-admin-2.min.js"
     },
     {
       "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\site.js",

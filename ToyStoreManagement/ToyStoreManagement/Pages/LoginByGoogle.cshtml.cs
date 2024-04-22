@@ -22,9 +22,9 @@ namespace ToyStoreManagement.Pages
             _accountService = accountService;
         }
 
-		public async Task<IActionResult> OnPost(string provider)
+		public async Task<IActionResult> OnPost()
 		{
-            await HttpContext.ChallengeAsync(provider, new AuthenticationProperties()
+            await HttpContext.ChallengeAsync(GoogleDefaults.AuthenticationScheme, new AuthenticationProperties()
             {
                 RedirectUri = Url.Page("/LoginByGoogle")
             });

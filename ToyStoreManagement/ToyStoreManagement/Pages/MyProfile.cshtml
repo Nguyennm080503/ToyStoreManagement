@@ -1,0 +1,11 @@
+﻿@page
+@model ToyStoreManagement.Pages.MyProfileModel
+@{
+	ViewData["Tittle"] = "My Profile";
+}
+@{
+    var session = HttpContext.Session;
+    var name = session.GetString("Name");
+    var roleId = session.GetInt32("RoleId");
+    var accountId = session.GetInt32("AccountId");
+}
