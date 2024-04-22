@@ -5,8 +5,9 @@ namespace ToyStoreManagement.Pages
 {
     public class DashboardModel : PageModel
     {
-        public void OnGet()
+        public async Task<IActionResult> OnGet()
         {
+            return Page();
         }
     }
 }

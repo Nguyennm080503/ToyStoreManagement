@@ -1,4 +1,4 @@
-using BusinessObjects.Models;
+﻿using BusinessObjects.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Text.RegularExpressions;
@@ -9,13 +9,26 @@ namespace ToyStoreManagement.Pages
     public class RegisterModel : PageModel
     {
         private readonly IAccountService _accountService;
-        public RegisterModel(IAccountService accountService) { _accountService = accountService; }
+		
+		public RegisterModel(IAccountService accountService) 
+		{ 
+			_accountService = accountService;
+		}
 
         [BindProperty] public string Email { get; set; }
         [BindProperty] public string Name { get; set; }
         [BindProperty] public string Phone {  get; set; }
         [BindProperty] public string Address { get; set; }
         [BindProperty] public string Message { get; set; }
+
+
+		public string ErrorMessage { get; set; }
+		public string EmailResponse { get; set; }
+
+		[BindProperty]
+
+
+		public string ReturnUrl { get; set; }
 
 		public async Task<IActionResult> OnPost()
         {
@@ -58,6 +71,12 @@ namespace ToyStoreManagement.Pages
                 }
             }
         }
+        public async Task<IActionResult> OnGet()
+        {
+            EmailResponse = HttpContext.Session.GetString("Email");
+            return Page();
+        }
+
 
 		private bool ValidatePhoneNumber(string phoneNumber)
 		{

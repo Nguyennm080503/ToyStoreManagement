@@ -34,14 +34,14 @@
 			      			<h3 class="mb-4">Sign In</h3>
 			      		</div>
 			      	</div>
-							<form action="post" class="signin-form">
+							<form method="post" class="signin-form">
 			      		<div class="form-group mb-3">
 			      			<label class="label" for="name">Username</label>
-			      			<input type="text" class="form-control" placeholder="Username" required name="Username">
+			      			<input type="text" class="form-control" placeholder="Username"  name="Username">
 			      		</div>
 		            <div class="form-group mb-3">
 		            	<label class="label" for="password">Password</label>
-		              <input type="password" class="form-control" placeholder="Password" required name="Password">
+		              <input type="password" class="form-control" placeholder="Password"  name="Password">
 		            </div>
 					<div class="form-group">
 						<strong style="color: red; ">@Model.Message</strong>
@@ -50,9 +50,6 @@
 		            <div class="form-group">
 		            	<button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
 		            </div>
-					 <div class="form-group">
-		            	<button class="form-control btn btn-primary rounded submit px-3">Sign In</button>
-		            </div>
 		            <div class="form-group d-md-flex">
 		            	<div class="w-50 text-left">
 			            	<label class="checkbox-wrap checkbox-primary mb-0">Remember Me
@@ -60,11 +57,17 @@
 									  <span class="checkmark"></span>
 										</label>
 									</div>
-									<div class="w-50 text-md-right">
-										<a href="#">Forgot Password</a>
-									</div>
 		            </div>
 		          </form>
+							<div class="form-group">
+								<form id="external-account" asp-page="./LoginByGoogle" method="post" class="form-horizontal">
+									<div>
+										<p>
+											<button type="submit" class="btn btn-primary" name="provider" value="Google" title="Log in using your Google">Login by Google</button>
+										</p>
+									</div>
+								</form>
+							</div>
 		        </div>
 		      </div>
 				</div>

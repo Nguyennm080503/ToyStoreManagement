@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BussinessObjects",
-    "\\BussinessObjects\\Models",
-    "\\ToyStoreManagement",
-    "\\ToyStoreManagement\\Pages"
+    "\\ToyStoreManagement"
   ],
-  "SelectedNode": "\\ToyStoreManagement\\Pages\\Login.cshtml",
+  "SelectedNode": "\\ToyStoreManagement\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }

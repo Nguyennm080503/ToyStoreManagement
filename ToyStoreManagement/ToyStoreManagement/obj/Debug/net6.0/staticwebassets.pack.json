@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ToyStoreManagement.bundle.scp.css"
     },
     {
+      "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\css\\all.min.css"
+    },
+    {
       "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
@@ -33,6 +37,14 @@
       "PackagePath": "staticwebassets\\css\\bootstrap\\utilities\\_stretched-link.css"
     },
     {
+      "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\css\\dataTables.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\css\\dataTables.bootstrap4.min.css"
+    },
+    {
+      "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\css\\sb-admin-2.min.css",
+      "PackagePath": "staticwebassets\\css\\sb-admin-2.min.css"
+    },
+    {
       "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -47,6 +59,14 @@
     {
       "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\dataTables.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\js\\dataTables.bootstrap4.min.js"
+    },
+    {
+      "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.dataTables.min.js"
     },
     {
       "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\jquery.min.js",
