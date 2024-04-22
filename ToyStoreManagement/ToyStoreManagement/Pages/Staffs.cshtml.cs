@@ -9,6 +9,7 @@ namespace ToyStoreManagement.Pages
     {
         private readonly IAccountService _accountService;
         public IEnumerable<Account> Accounts { get; set; }
+        public int ListNumber { get; set; }
 
         public StaffsModel(IAccountService accountService)
         {
@@ -20,6 +21,7 @@ namespace ToyStoreManagement.Pages
             if (roleId == 1 || roleId == 2)
             {
                 Accounts = _accountService.GetAllStaffAccounts();
+                ListNumber = Accounts.Count();
                 return Page();
             }
             else

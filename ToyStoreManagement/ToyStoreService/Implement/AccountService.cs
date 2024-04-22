@@ -39,5 +39,15 @@ namespace ToyStoreService.Implement
         {
             return _accountRepository.GetAllStaffAccounts();
         }
+
+        public Account GetProfileAccount(int id)
+        {
+            return _accountRepository.GetProfileAccount(id);
+        }
+
+        public bool UpdateProfileAccount(Account account)
+        {
+            return _accountRepository.UpdateProfileAccount(account);
+        }
     }
 }

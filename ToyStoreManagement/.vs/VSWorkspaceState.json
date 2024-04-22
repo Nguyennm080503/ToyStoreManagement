@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ToyStoreManagement"
+    "\\ToyStoreManagement",
+    "\\ToyStoreManagement\\Pages",
+    "\\ToyStoreManagement\\Pages\\Shared"
   ],
-  "SelectedNode": "\\ToyStoreManagement\\appsettings.json",
+  "SelectedNode": "\\ToyStoreManagement\\Pages\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

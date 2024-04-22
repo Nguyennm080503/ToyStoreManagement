@@ -33,9 +33,19 @@ namespace ToyStoreRepository.Implement
             return _accountDao.GetAll().Where(x => x.RoleId == 2).ToList();
         }
 
+        public Account GetProfileAccount(int id)
+        {
+			return _accountDao.GetDetail(id);
+        }
+
         public bool RegisterNewAccount(Account account)
 		{
 			return _accountDao.Create(account);
 		}
-	}
+
+        public bool UpdateProfileAccount(Account account)
+        {
+            return _accountDao.Update(account);
+        }
+    }
 }

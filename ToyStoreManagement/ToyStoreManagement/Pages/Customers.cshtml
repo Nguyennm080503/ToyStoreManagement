@@ -72,24 +72,11 @@
             </table>
             <div class="row">
                 <div class="col-sm-12 col-md-5">
-                    <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite"></div>
-                </div><div class="col-sm-12 col-md-7">
+                    <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing <span id="startEntry">1</span> to <span id="endEntry">10</span> of <span id="totalEntries">57</span> entries</div>
+                </div>
+                <div class="col-sm-12 col-md-7">
                     <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
-                        <ul class="pagination">
-                            <li class="paginate_button page-item previous disabled" id="dataTable_previous">
-                                <a href="#" aria-controls="dataTable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
-                            </li>
-                            <li class="paginate_button page-item active">
-                                <a href="#" aria-controls="dataTable" data-dt-idx="1" tabindex="0" class="page-link">1</a>
-                            </li>
-                            <li class="paginate_button page-item ">
-                                <a href="#" aria-controls="dataTable" data-dt-idx="2" tabindex="0" class="page-link">2</a>
-                            </li>
-                            <li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
-                            <li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
-                            <li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
-                            <li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="6" tabindex="0" class="page-link">6</a></li>
-                            <li class="paginate_button page-item next" id="dataTable_next"><a href="#" aria-controls="dataTable" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                        <ul class="pagination" id="paginationList">
                         </ul>
                     </div>
                 </div>
@@ -101,3 +88,36 @@
 <script src="~/js/jquery.dataTables.min.js"></script>
 <script src="~/js/dataTables.bootstrap4.min.js"></script>
 <script src="~/js/datatables-demo.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var totalAccounts = @Model.ListNumber;
+
+        var displayLength = parseInt($("select[name='dataTable_length']").val());
+
+        var totalPages = Math.ceil(totalAccounts / displayLength);
+
+        $(".pagination").empty();
+
+        for (var i = 1; i <= totalPages; i++) {
+            if (i === 1) {
+                $(".pagination").append('<li class="paginate_button page-item active"><a href="#" aria-controls="dataTable" data-dt-idx="' + i + '" tabindex="0" class="page-link">' + i + '</a></li>');
+            } else {
+                $(".pagination").append('<li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="' + i + '" tabindex="0" class="page-link">' + i + '</a></li>');
+            }
+        }
+
+        $("select[name='dataTable_length']").change(function () {
+            displayLength = parseInt($(this).val());
+            totalPages = Math.ceil(totalAccounts / displayLength);
+            $(".pagination").empty();
+            for (var i = 1; i <= totalPages; i++) {
+                if (i === 1) {
+                    $(".pagination").append('<li class="paginate_button page-item active"><a href="#" aria-controls="dataTable" data-dt-idx="' + i + '" tabindex="0" class="page-link">' + i + '</a></li>');
+                } else {
+                    $(".pagination").append('<li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="' + i + '" tabindex="0" class="page-link">' + i + '</a></li>');
+                }
+            }
+        });
+    });
+</script>

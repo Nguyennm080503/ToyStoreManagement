@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Githup/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/CreateStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlU3RhZmYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Githup/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Customers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
