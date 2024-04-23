@@ -19,3 +19,19 @@ D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\Toy
 D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\refint\ToyStoreDao.dll
 D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.pdb
 D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ref\ToyStoreDao.dll
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\bin\Debug\net6.0\ToyStoreDao.deps.json
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\bin\Debug\net6.0\ToyStoreDao.dll
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\bin\Debug\net6.0\ToyStoreDao.pdb
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\bin\Debug\net6.0\BusinessObjects.dll
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\bin\Debug\net6.0\BusinessObjects.pdb
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.AssemblyInfo.cs
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.sourcelink.json
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStore.13D8F33F.Up2Date
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.dll
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\refint\ToyStoreDao.dll
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.pdb
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ref\ToyStoreDao.dll
