@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Az+f7kj3yJsg1fx2omujFBw+xb/z+7RTcvF56pXw8eA=",
+  "Hash": "pJdQXskz+N5gj+hLVgiQ3+EDEmzZU9chmlWhvkFfCgE=",
   "Source": "ToyStoreManagement",
   "BasePath": "_content/ToyStoreManagement",
   "Mode": "Default",
@@ -226,6 +226,25 @@
       "OriginalItemSpec": "wwwroot\\css\\dataTables.bootstrap4.min.css"
     },
     {
+      "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\css\\messagenotification.css",
+      "SourceId": "ToyStoreManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\",
+      "BasePath": "_content/ToyStoreManagement",
+      "RelativePath": "css/messagenotification.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\messagenotification.css"
+    },
+    {
       "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\css\\sb-admin-2.min.css",
       "SourceId": "ToyStoreManagement",
       "SourceType": "Discovered",
@@ -302,6 +321,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "SourceId": "ToyStoreManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\",
+      "BasePath": "_content/ToyStoreManagement",
+      "RelativePath": "js/bootstrap.bundle.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\bootstrap.bundle.min.js"
+    },
+    {
       "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\bootstrap.min.js",
       "SourceId": "ToyStoreManagement",
       "SourceType": "Discovered",
@@ -340,6 +378,25 @@
       "OriginalItemSpec": "wwwroot\\js\\dataTables.bootstrap4.min.js"
     },
     {
+      "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\datatables-demo.js",
+      "SourceId": "ToyStoreManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\",
+      "BasePath": "_content/ToyStoreManagement",
+      "RelativePath": "js/datatables-demo.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\datatables-demo.js"
+    },
+    {
       "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\jquery.dataTables.min.js",
       "SourceId": "ToyStoreManagement",
       "SourceType": "Discovered",
@@ -359,6 +416,25 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.dataTables.min.js"
     },
     {
+      "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\jquery.easing.min.js",
+      "SourceId": "ToyStoreManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\",
+      "BasePath": "_content/ToyStoreManagement",
+      "RelativePath": "js/jquery.easing.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\jquery.easing.min.js"
+    },
+    {
       "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\jquery.min.js",
       "SourceId": "ToyStoreManagement",
       "SourceType": "Discovered",
@@ -376,6 +452,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\jquery.min.js"
+    },
+    {
+      "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\jquery.notification.js",
+      "SourceId": "ToyStoreManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\",
+      "BasePath": "_content/ToyStoreManagement",
+      "RelativePath": "js/jquery.notification.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\jquery.notification.js"
     },
     {
       "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\main.js",
@@ -414,6 +509,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\popper.js"
+    },
+    {
+      "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\sb-admin-2.min.js",
+      "SourceId": "ToyStoreManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\",
+      "BasePath": "_content/ToyStoreManagement",
+      "RelativePath": "js/sb-admin-2.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\sb-admin-2.min.js"
     },
     {
       "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\site.js",

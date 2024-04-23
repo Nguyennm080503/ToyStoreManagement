@@ -34,16 +34,19 @@ namespace ToyStoreManagement.Pages
         {
             if(Email == null || Name == null || Phone == null || Address == null)
             {
-                Message = "All fields must be required!";
+                EmailResponse = Email;
+				Message = "All fields must be required!";
                 return Page();
             }
             else if(!ValidateEmail(Email))
             {
+				EmailResponse = Email;
 				Message = "Email is invalid! Fill email again.";
 				return Page();
 			}
             else if (!ValidatePhoneNumber(Phone))
             {
+				EmailResponse = Email;
 				Message = "Email is invalid! Fill email again.";
 				return Page();
 			}
@@ -61,12 +64,20 @@ namespace ToyStoreManagement.Pages
                 bool isRegister = _accountService.RegisterNewAccount(account);
                 if (isRegister)
                 {
+                    var accountuser = _accountService.GetAccountByEmail(Email);
+                    if(accountuser != null)
+                    {
+                        HttpContext.Session.SetString("Name", accountuser.Name);
+                        HttpContext.Session.SetInt32("AccountId", accountuser.AccountId);
+                        HttpContext.Session.SetInt32("RoleId", (int)accountuser.RoleId);
+                    }
                     return RedirectToPage("/Index");
 
 				}
                 else
                 {
-                    Message = "Have some error with service. Try again!";
+					EmailResponse = Email;
+					Message = "Have some error with service. Try again!";
                     return Page();
                 }
             }

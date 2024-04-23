@@ -25,17 +25,27 @@ namespace ToyStoreRepository.Implement
 
         public IEnumerable<Account> GetAllCustomerAccounts()
         {
-			return _accountDao.GetAll().Where(x => x.RoleId == 3).ToList();
+			return _accountDao.GetAll().Where(x => x.RoleId == 3).OrderByDescending(x => x.AccountId).ToList();
         }
 
         public IEnumerable<Account> GetAllStaffAccounts()
         {
-            return _accountDao.GetAll().Where(x => x.RoleId == 2).ToList();
+            return _accountDao.GetAll().Where(x => x.RoleId == 2).OrderByDescending(x => x.AccountId).ToList();
+        }
+
+        public Account GetProfileAccount(int id)
+        {
+			return _accountDao.GetDetail(id);
         }
 
         public bool RegisterNewAccount(Account account)
 		{
 			return _accountDao.Create(account);
 		}
-	}
+
+        public bool UpdateProfileAccount(Account account)
+        {
+            return _accountDao.Update(account);
+        }
+    }
 }
