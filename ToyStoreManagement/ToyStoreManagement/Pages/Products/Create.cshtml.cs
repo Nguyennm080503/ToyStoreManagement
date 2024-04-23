@@ -13,33 +13,53 @@ namespace ToyStoreManagement.Pages.Products
     public class CreateModel : PageModel
     {
         private readonly IProductService _service;
+        private readonly ICategoryService _categoryService;
+        public string Message { get; set; }
 
-        public CreateModel(IProductService service)
+        public IEnumerable<Category> Categories {  get; set; }    
+
+        public CreateModel(IProductService service, ICategoryService categoryService)
         {
             _service = service;
+            _categoryService = categoryService;
         }
 
-        public IActionResult OnGet()
+        public async Task<IActionResult> OnGet()
         {
-        ViewData["CategoryId"] = new SelectList(_service.GetAllProducts(), "CategoryId", "CategoryId");
-            return Page();
+            Categories = _categoryService.GetAllCategory();
+
+			return Page();
         }
 
-        [BindProperty]
-        public Product Product { get; set; } = default!;
-        
+		[BindProperty] public string Name { get; set; }
+		[BindProperty] public int Price { get; set; }
+		[BindProperty] public int StockQuantity { get; set; }
+		[BindProperty] public int CategoryId { get; set; }
+		[BindProperty] public string Description { get; set; }
+		[BindProperty] public string Thumbnail { get; set; }
 
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
-        public async Task<IActionResult> OnPostAsync()
+
+		// To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
+		public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _service.GetAllProducts == null || Product == null)
+            if(_service.GetAllProducts().Any(x => x.Name == Name))
             {
+                Message = "Product is existed! Try again";
                 return Page();
             }
-
-            _service.AddProduct(Product);
-
-            return RedirectToPage("./Index");
+            else
+            {
+                Product product = new Product();
+                product.Name = Name;
+                product.Price = Price;
+                product.CategoryId = CategoryId;
+                product.Description = Description;
+                product.StockQuantity = StockQuantity;
+                product.PhotoUrlThumnail = Thumbnail;
+                product.Status = 1;
+                _service.AddProduct(product);
+                return RedirectToPage("/ManagementProduct");
+            }
         }
     }
 }

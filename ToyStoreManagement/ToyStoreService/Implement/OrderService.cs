@@ -1,4 +1,5 @@
-﻿using ToyStoreRepository.Interface;
+﻿using BusinessObjects.Models;
+using ToyStoreRepository.Interface;
 using ToyStoreService.Interface;
 
 namespace ToyStoreService.Implement
@@ -10,6 +11,11 @@ namespace ToyStoreService.Implement
         public OrderService(IOrderRepository orderRepository)
         {
             _orderRepository = orderRepository;
+        }
+
+        public IEnumerable<Order> GetAllOrder()
+        {
+            return _orderRepository.GetAllOrder();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using ToyStoreRepository.Interface;
+﻿using BusinessObjects.Models;
+using ToyStoreRepository.Interface;
 using ToyStoreService.Interface;
 
 namespace ToyStoreService.Implement
@@ -7,5 +8,10 @@ namespace ToyStoreService.Implement
     {
         private readonly ICategoryRepository _categoryRepository;
         public CategoryService(ICategoryRepository categoryRepository) { _categoryRepository = categoryRepository; }
-    }
+
+		public IEnumerable<Category> GetAllCategory()
+		{
+			return _categoryRepository.GetAllCategory();
+		}
+	}
 }

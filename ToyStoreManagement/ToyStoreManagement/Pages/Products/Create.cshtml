@@ -2,62 +2,70 @@
 @model ToyStoreManagement.Pages.Products.CreateModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create Product";
 }
 
-<h1>Create</h1>
-
-<h4>Product</h4>
-<hr />
 <div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Product.Name" class="control-label"></label>
-                <input asp-for="Product.Name" class="form-control" />
-                <span asp-validation-for="Product.Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Product.Description" class="control-label"></label>
-                <input asp-for="Product.Description" class="form-control" />
-                <span asp-validation-for="Product.Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Product.Price" class="control-label"></label>
-                <input asp-for="Product.Price" class="form-control" />
-                <span asp-validation-for="Product.Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Product.StockQuantity" class="control-label"></label>
-                <input asp-for="Product.StockQuantity" class="form-control" />
-                <span asp-validation-for="Product.StockQuantity" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Product.PhotoUrlThumnail" class="control-label"></label>
-                <input asp-for="Product.PhotoUrlThumnail" class="form-control" />
-                <span asp-validation-for="Product.PhotoUrlThumnail" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Product.CategoryId" class="control-label"></label>
-                <select asp-for="Product.CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Product.Status" class="control-label"></label>
-                <input asp-for="Product.Status" class="form-control" />
-                <span asp-validation-for="Product.Status" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+	<div class="col-12">
+		<div class="my-5">
+			<h3>New Product</h3>
+			<hr>
+		</div>
+		<form class="file-upload" method="post">
+			<div class="row mb-5 gx-5">
+				<div class="col-xxl-8 mb-5 mb-xxl-0">
+					<div class="bg-secondary-soft px-4 py-5 rounded">
+						<div class="row g-3">
+							<h4 class="mb-4 mt-0">Profile detail</h4>
+							<div class="col-md-6">
+								<label class="form-label">Name *</label>
+								<input type="text" class="form-control" placeholder="" aria-label="Name" name="Name" value="" required>
+							</div>
+							<div class="col-md-6">
+								<label class="form-label">Price *</label>
+								<input type="number" class="form-control" placeholder="" aria-label="Price" name="Price" value="" required>
+							</div>
+							<div class="col-md-6">
+								<label for="inputEmail4" class="form-label">Stock Quantity *</label>
+								<input type="number" class="form-control"  name="StockQuantity" value="" required>
+							</div>
+							<div class="col-md-6">
+								<label class="form-label">Category *</label>
+								<select name="CategoryId" aria-controls="CategoryId" class="custom-select form-control ">
+									@foreach (var category in Model.Categories)
+									{
+										<option value="@category.CategoryId">@category.Name</option>
+									}
+								</select>
+							</div>
+							<div class="col-md-12">
+								<label class="form-label">Description *</label>
+								<input type="text" class="form-control" placeholder="" aria-label="Description" name="Description" value="" required>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xxl-4">
+					<div class="bg-secondary-soft px-4 py-5 rounded">
+						<div class="row g-3">
+							<h4 class="mb-4 mt-0">Upload thumbnai product photo</h4>
+							<div class="text-center">
+								<div class="square position-relative display-2 mb-3">
+									<i class="fas fa-fw fa-user position-absolute top-50 start-50 translate-middle text-secondary"></i>
+								</div>
+								<input type="file" id="customFile" name="Thumbnail" hidden="">
+								<label class="btn btn-success-soft btn-block" for="customFile">Upload</label>
+								<button type="button" class="btn btn-danger-soft">Remove</button>
+								<p class="text-muted mt-3 mb-0"><span class="me-1">Note:</span>Minimum size 300px x 300px</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="gap-3 d-md-flex justify-content-md-end text-center">
+					<p style="color:red">@Model.Message</p>
+					<button type="submit" class="btn btn-primary btn-lg">Create staff</button>
+				</div>
+		</form>
+	</div>
 </div>
-
-<div>
-    <a asp-page="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

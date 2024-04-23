@@ -1,7 +1,7 @@
 ﻿@page
-@model ToyStoreManagement.Pages.CustomersModel
+@model ToyStoreManagement.Pages.ManageProductModel
 @{
-	ViewData["Tittle"] = "Account Management";
+    ViewData["Tittle"] = "Product Management";
 }
 @{
     var session = HttpContext.Session;
@@ -11,7 +11,7 @@
 }
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Customer List</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Product List</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -36,27 +36,39 @@
                         </label>
                     </div>
                 </div>
+                <div class="col-sm-12 col-md-6">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <a href="/Products/Create" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            Create New Product
+                        </a>
+                    </div>
+                </div>
             </div>
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Account ID</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Product ID</th>
                         <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Name</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Email</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Address</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Price</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Stock Quantity</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Category</th>
                         <th>Status</th>
                         <th></th>
                     </tr>
                 </thead>
-                    <tbody>
-                    @foreach(var account in Model.Accounts)
+                <tbody>
+                    @foreach (var product in Model.Products)
                     {
                         <tr>
-                            <td>@account.AccountId</td>
-                            <td>@account.Name</td>
-                            <td>@account.Email</td>
-                            <td>@account.Address</td>
-                            <td>@if(account.Status == 1)
+                            <td>@product.ProductId</td>
+                            <td>@product.Name</td>
+                            <td>@product.Price</td>
+                            <td>@product.StockQuantity</td>
+                            <td>@product.Category.Name</td>
+                            <td>
+                                @if (product.Status == 1)
                                 {
                                     <p style="color:green">Active</p>
                                 }
@@ -66,13 +78,13 @@
                                 }
                             </td>
                             <td>
-                                @if (roleId == 1)
+                                @if(roleId == 1)
                                 {
-                                    @if (account.Status == 1)
+                                    @if (product.Status == 1)
                                     {
                                         <form method="post">
                                             <input name="Status" value="0" hidden />
-                                            <input name="AccountId" value="@account.AccountId" hidden />
+                                            <input name="ProductId" value="@product.ProductId" hidden />
                                             <button class="btn btn-primary">Block</button>
                                         </form>
                                     }
@@ -80,11 +92,12 @@
                                     {
                                         <form method="post">
                                             <input name="Status" value="1" hidden />
-                                            <input name="AccountId" value="@account.AccountId" hidden />
+                                            <input name="ProductId" value="@product.ProductId" hidden />
                                             <button class="btn btn-primary">Active</button>
                                         </form>
                                     }
                                 }
+                                <a href="Products/Details?ProductId=@product.ProductId" class="btn btn-primary">View detail</a>
                             </td>
                         </tr>
                     }
