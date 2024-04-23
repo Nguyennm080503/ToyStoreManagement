@@ -1,4 +1,4 @@
-using BusinessObjects.Models;
+﻿using BusinessObjects.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Text.RegularExpressions;
@@ -9,7 +9,11 @@ namespace ToyStoreManagement.Pages
     public class RegisterModel : PageModel
     {
         private readonly IAccountService _accountService;
-        public RegisterModel(IAccountService accountService) { _accountService = accountService; }
+		
+		public RegisterModel(IAccountService accountService) 
+		{ 
+			_accountService = accountService;
+		}
 
         [BindProperty] public string Email { get; set; }
         [BindProperty] public string Name { get; set; }
@@ -17,20 +21,32 @@ namespace ToyStoreManagement.Pages
         [BindProperty] public string Address { get; set; }
         [BindProperty] public string Message { get; set; }
 
+
+		public string ErrorMessage { get; set; }
+		public string EmailResponse { get; set; }
+
+		[BindProperty]
+
+
+		public string ReturnUrl { get; set; }
+
 		public async Task<IActionResult> OnPost()
         {
             if(Email == null || Name == null || Phone == null || Address == null)
             {
-                Message = "All fields must be required!";
+                EmailResponse = Email;
+				Message = "All fields must be required!";
                 return Page();
             }
             else if(!ValidateEmail(Email))
             {
+				EmailResponse = Email;
 				Message = "Email is invalid! Fill email again.";
 				return Page();
 			}
             else if (!ValidatePhoneNumber(Phone))
             {
+				EmailResponse = Email;
 				Message = "Email is invalid! Fill email again.";
 				return Page();
 			}
@@ -48,16 +64,30 @@ namespace ToyStoreManagement.Pages
                 bool isRegister = _accountService.RegisterNewAccount(account);
                 if (isRegister)
                 {
+                    var accountuser = _accountService.GetAccountByEmail(Email);
+                    if(accountuser != null)
+                    {
+                        HttpContext.Session.SetString("Name", accountuser.Name);
+                        HttpContext.Session.SetInt32("AccountId", accountuser.AccountId);
+                        HttpContext.Session.SetInt32("RoleId", (int)accountuser.RoleId);
+                    }
                     return RedirectToPage("/Index");
 
 				}
                 else
                 {
-                    Message = "Have some error with service. Try again!";
+					EmailResponse = Email;
+					Message = "Have some error with service. Try again!";
                     return Page();
                 }
             }
         }
+        public async Task<IActionResult> OnGet()
+        {
+            EmailResponse = HttpContext.Session.GetString("Email");
+            return Page();
+        }
+
 
 		private bool ValidatePhoneNumber(string phoneNumber)
 		{

@@ -5,6 +5,11 @@ namespace ToyStoreRepository.Interface
     public interface IAccountRepository
     {
         Account GetAccountByUsername(string username);
-        bool RegisterNewAccount(Account account);
+        Account GetProfileAccount(int id);
+        IEnumerable<Account> GetAllCustomerAccounts();
+        IEnumerable<Account> GetAllStaffAccounts();
+        Account GetAccountByEmail(string email);
+		bool RegisterNewAccount(Account account);
+        bool UpdateProfileAccount(Account account);
     }
 }

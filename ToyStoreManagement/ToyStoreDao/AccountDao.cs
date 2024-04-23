@@ -12,5 +12,9 @@ namespace ToyStoreDao
         {
             return _dbContext.Accounts.FirstOrDefault(x => x.Username == username);
         }
-    }
+		public Account GetAccountByEmail(string email)
+		{
+			return _dbContext.Accounts.FirstOrDefault(x => x.Email == email);
+		}
+	}
 }

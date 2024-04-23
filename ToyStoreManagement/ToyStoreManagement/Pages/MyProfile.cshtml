@@ -1,0 +1,72 @@
+﻿@page
+@model ToyStoreManagement.Pages.MyProfileModel
+@{
+	ViewData["Tittle"] = "My Profile";
+}
+@{
+    var session = HttpContext.Session;
+    var name = session.GetString("Name");
+    var roleId = session.GetInt32("RoleId");
+    var accountId = session.GetInt32("AccountId");
+}
+<head>
+	<link rel="stylesheet" href="~/css/messagenotification.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<div class="row">
+	<div class="col-12">
+		<div class="my-5">
+			<h3>My Profile</h3>
+			<hr>
+		</div>
+		<form class="file-upload" method="post">
+			<div class="row mb-5 gx-5">
+				<div class="col-xxl-8 mb-4 mb-xxl-0">
+					<div class="bg-secondary-soft px-4 py-5 rounded">
+						<div class="row g-3">
+							<h4 class="mb-4 mt-0">Profile detail</h4>
+							<div class="col-md-6">
+								<label class="form-label">Name *</label>
+								<input type="text" class="form-control" placeholder="" aria-label="Name" name="Name" value="@Model.Account.Name">
+							</div>
+							<div class="col-md-6">
+								<label class="form-label">Phone number *</label>
+								<input type="text" class="form-control" placeholder="" aria-label="Phone number" name="Phone" value="@Model.Account.Phone">
+							</div>
+							<div class="col-md-6">
+								<label for="inputEmail4" class="form-label">Email *</label>
+								<input type="email" class="form-control" id="inputEmail4" value="@Model.Account.Email" disabled>
+							</div>
+							<div class="col-md-6">
+								<label class="form-label">Address *</label>
+								<input type="text" class="form-control" placeholder="" aria-label="Address" name="Address" value="@Model.Account.Address">
+							</div>
+						</div> 
+					</div>
+				</div>
+			<div class="gap-3 d-md-flex justify-content-md-end text-center">
+				<button type="submit" class="btn btn-primary btn-lg">Update profile</button>
+			</div>
+		</form> 
+	</div>
+	@if(Model.Message != null)
+	{
+		<div class="alerts">
+
+			<div class="alert alert-success  animated bounceInRight" id="notification">
+			<div class="icon pull-left">
+				<i class="fa fa-info fa-2x"></i>
+			</div>
+			<div class="copy">
+				<h4>Information</h4>
+				<p>@Model.Message</p>
+			</div>
+			<a class="close">
+				x
+			</a>
+		</div>
+		</div>
+	}
+</div>
+
+<script src="~/js/jquery.notification.js"></script>

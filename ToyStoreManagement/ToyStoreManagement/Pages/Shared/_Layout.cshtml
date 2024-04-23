@@ -13,8 +13,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ToyStoreManagement</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ToyStoreManagement.styles.css" asp-append-version="true" />
+    <link href="~/css/all.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet"/>
+
+    <link href="~/css/sb-admin-2.min.css" rel="stylesheet"/>
+    <link href="~/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
 </head>
 <body>
     @if(roleId != 1 && roleId != 2){
@@ -28,15 +36,22 @@
                     </button>
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                         <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/Toy">Toy</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/Order">Cart</a>
-                            </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Toy">Toy</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Order">Cart</a>
+                                </li>
+                            @if (name == null)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login</a>
+                                </li>
+
+                            }
                             @if (roleId == 3)
                             {
                                 <li class="nav-item">
@@ -46,7 +61,7 @@
                                     <a class="nav-link text-dark" asp-area="" asp-page="/MyProfile">My Profile</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-action="/Logout">Logout</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Logout">Logout</a>
                                 </li>
                             }
                         </ul>
@@ -55,21 +70,100 @@
             </nav>
         </header>
     }
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    @if (roleId == 1 || roleId == 2)
+    {
+            <div id="wrapper">
 
+                <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                        <div class="sidebar-brand-text mx-3">Admin Dashboard</div>
+                    </a>
+
+                    <hr class="sidebar-divider my-0">
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Dashboard">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <hr class="sidebar-divider">
+
+                    <div class="sidebar-heading">
+                        Management Account
+                    </div>
+
+                    <li class="nav-item">
+                    <a class="nav-link collapsed" href="/Staffs">
+                            <span>Management Staff</span>
+                        </a>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="/Customers">
+                        <span>Management Customer</span>
+                    </a>
+                    </li>
+
+                    <hr class="sidebar-divider">
+
+                    <div class="sidebar-heading">
+                        Product
+                    </div>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="#" >
+                            <span>Management Product</span>
+                        </a>
+                    </li>
+
+                <hr class="sidebar-divider">
+
+                <div class="sidebar-heading">
+                    Order
+                </div>
+                    <!-- Nav Item - Charts -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="charts.html">
+                            <span>Order Management</span>
+                        </a>
+                    </li>
+                <hr class="sidebar-divider">
+
+                <div class="sidebar-heading">
+                    Settings
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Logout">
+                        <span>Logout</span>
+                    </a>
+                </li>
+                    </ul>
+                    <div class="container-fluid">
+            <main role="main">
+                @RenderBody()
+            </main>
+                        </div>
+        </div>
+                }
+
+     @if(roleId != 1 && roleId != 2){
+            @RenderBody()
+     }
+     @if(roleId != 1 && roleId != 2){
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2024 - ToyStoreManagement - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
+     }
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/sb-admin-2.min.js"></script>
+    <script src="~/js/jquery.easing.min.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

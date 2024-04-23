@@ -141,3 +141,9 @@ D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement\obj\Debug\net
 D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement\obj\Debug\net6.0\ToyStoreManagement.pdb
 D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement\obj\Debug\net6.0\ToyStoreManagement.genruntimeconfig.cache
 D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement\obj\Debug\net6.0\ref\ToyStoreManagement.dll
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll

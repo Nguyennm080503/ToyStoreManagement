@@ -1,6 +1,12 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Security.Claims;
 using ToyStoreService.Interface;
+using Microsoft.AspNetCore.Identity;
+using System.Net.WebSockets;
 
 namespace ToyStoreManagement.Pages
 {
@@ -12,12 +18,11 @@ namespace ToyStoreManagement.Pages
         {
             _accountService = accountService;
         }
-
         [BindProperty] public string UserName { get; set; }
         [BindProperty] public string Password { get; set; }
         [BindProperty] public string Message { get; set; }
 
-        public async Task<IActionResult> OnPost() 
+        public async Task<IActionResult> OnPostAsync() 
         {
             if(UserName == null && Password == null)
             {
@@ -51,5 +56,16 @@ namespace ToyStoreManagement.Pages
                 }
             }
         }
-    }
+        public async Task<IActionResult> OnGetAsync()
+        {
+            var message = HttpContext.Session.GetString("Message");
+            if(message != null)
+            {
+                Message = message;
+                HttpContext.Session.Remove("Message");
+                return Page();
+            }
+            return Page();
+        }
+	}
 }
