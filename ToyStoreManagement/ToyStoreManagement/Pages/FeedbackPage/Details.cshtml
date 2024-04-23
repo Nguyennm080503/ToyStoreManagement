@@ -1,0 +1,43 @@
+﻿@page
+@model ToyStoreManagement.Pages.FeedbackPage.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Feedback</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Feedback.FeedbackText)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Feedback.FeedbackText)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Feedback.FeedbackDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Feedback.FeedbackDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Feedback.Customer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Feedback.Customer.AccountId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Feedback.Product)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Feedback.Product.ProductId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Feedback?.FeedbackId">Edit</a> |
+    <a asp-page="./Feedback">Back to List</a>
+</div>

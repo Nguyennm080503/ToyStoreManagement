@@ -16,5 +16,9 @@ namespace ToyStoreDao
 		{
 			return _dbContext.Accounts.FirstOrDefault(x => x.Email == email);
 		}
+        public IEnumerable<Account> GetAllAccounts()
+        {
+            return _dbContext.Accounts.ToList();
+        }
 	}
 }

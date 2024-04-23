@@ -1,4 +1,5 @@
-﻿using ToyStoreRepository.Interface;
+﻿using BusinessObjects.Models;
+using ToyStoreRepository.Interface;
 using ToyStoreService.Interface;
 
 namespace ToyStoreService.Implement
@@ -10,6 +11,11 @@ namespace ToyStoreService.Implement
         public ProductService(IProductRepository productRepository)
         {
             _productRepository = productRepository;
+        }
+
+        public IEnumerable<Product> GetAllProduct()
+        {
+            return _productRepository.GetAllProduct();
         }
     }
 }
