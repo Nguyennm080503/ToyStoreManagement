@@ -21,3 +21,21 @@ D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net
 D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\refint\ToyStoreRepository.dll
 D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.pdb
 D:\Githup\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ref\ToyStoreRepository.dll
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreRepository.deps.json
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreRepository.dll
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreRepository.pdb
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\BusinessObjects.dll
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreDao.dll
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreDao.pdb
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\BusinessObjects.pdb
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.AssemblyInfo.cs
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.sourcelink.json
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStore.A1E1C52D.Up2Date
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.dll
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\refint\ToyStoreRepository.dll
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.pdb
+C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ref\ToyStoreRepository.dll
