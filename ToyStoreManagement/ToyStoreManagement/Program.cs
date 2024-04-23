@@ -11,7 +11,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddService();
-<<<<<<< HEAD
 
 builder.Services.AddAuthentication(option =>
 {
@@ -34,8 +33,6 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 
 
 
-=======
->>>>>>> binh
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
