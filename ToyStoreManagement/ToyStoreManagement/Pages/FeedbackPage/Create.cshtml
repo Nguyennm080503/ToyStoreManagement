@@ -1,0 +1,46 @@
+﻿@page
+@model ToyStoreManagement.Pages.FeedbackPage.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <h2 class="my-4">Create New Feedback</h2>
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="customerId" class="form-label">Customer</label>
+            <select id="customerId" name="CustomerId" class="form-select">
+                <option value="">Select Customer</option>
+                @foreach (var customer in Model.Accounts)
+                {
+                    <option value="@customer.AccountId">@customer.Name</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="productId" class="form-label">Product</label>
+            <select id="productId" name="ProductId" class="form-select">
+                <option value="">Select Product</option>
+                @foreach (var product in Model.Products)
+                {
+                    <option value="@product.ProductId">@product.Name</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="feedback" class="form-label">Feedback</label>
+            <textarea id="feedback" name="Feedback" class="form-control" rows="4"></textarea>
+        </div>
+        <div class="mb-3">
+            <p id="error-message" class="text-danger">@Model.Message</p>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Create Feedback</button>
+            <a asp-page="./Feedback" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

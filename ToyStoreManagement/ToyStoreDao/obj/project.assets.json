@@ -2297,19 +2297,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
+    "C:\\Users\\Quoc-pc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj",
+      "projectUniqueName": "D:\\PRN221\\ok\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj",
       "projectName": "ToyStoreDao",
-      "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\obj\\",
+      "projectPath": "D:\\PRN221\\ok\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj",
+      "packagesPath": "C:\\Users\\Quoc-pc\\.nuget\\packages\\",
+      "outputPath": "D:\\PRN221\\ok\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Quoc-pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2323,8 +2323,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj": {
-              "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj"
+            "D:\\PRN221\\ok\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj": {
+              "projectPath": "D:\\PRN221\\ok\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj"
             }
           }
         }
@@ -2333,6 +2333,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2354,7 +2359,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

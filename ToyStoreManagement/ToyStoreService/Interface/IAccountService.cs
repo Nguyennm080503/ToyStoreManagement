@@ -11,5 +11,6 @@ namespace ToyStoreService.Interface
         Account GetAccountByEmail(string email);
 		bool RegisterNewAccount(Account account);
         bool UpdateProfileAccount(Account account);
+        public IEnumerable<Account> GetAllAccounts();
     }
 }
