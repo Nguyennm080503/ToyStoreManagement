@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj": {}
+    "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj": {
+    "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj",
+        "projectUniqueName": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj",
         "projectName": "BusinessObjects",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\obj\\",
+        "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -90,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
