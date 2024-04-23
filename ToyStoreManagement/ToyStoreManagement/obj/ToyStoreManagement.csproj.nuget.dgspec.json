@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement.csproj": {}
   },
   "projects": {
-    "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj": {
+    "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj",
         "projectName": "BusinessObjects",
-        "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -81,21 +90,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj": {
+    "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj",
         "projectName": "ToyStoreDao",
-        "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -109,8 +122,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj": {
-                "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj"
+              "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\BussinessObjects\\BusinessObjects.csproj"
               }
             }
           }
@@ -119,6 +132,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -140,21 +158,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement.csproj": {
+    "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement.csproj",
         "projectName": "ToyStoreManagement",
-        "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -168,8 +190,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\ToyStoreService.csproj": {
-                "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\ToyStoreService.csproj"
+              "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\ToyStoreService.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\ToyStoreService.csproj"
               }
             }
           }
@@ -178,11 +200,36 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.29, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.29, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.29, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -202,21 +249,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj": {
+    "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj",
         "projectName": "ToyStoreRepository",
-        "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -230,8 +281,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj": {
-                "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj"
+              "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj"
               }
             }
           }
@@ -240,6 +291,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -261,21 +317,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\ToyStoreService.csproj": {
+    "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\ToyStoreService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\ToyStoreService.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\ToyStoreService.csproj",
         "projectName": "ToyStoreService",
-        "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\ToyStoreService.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\ToyStoreService.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -289,8 +349,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj": {
-                "projectPath": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj"
+              "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\hk7\\PRN221 bl3\\FinalP\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj"
               }
             }
           }
@@ -299,6 +359,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -320,7 +385,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
