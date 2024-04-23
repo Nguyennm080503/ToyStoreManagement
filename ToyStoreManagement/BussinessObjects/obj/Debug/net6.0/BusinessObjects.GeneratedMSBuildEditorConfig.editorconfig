@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BusinessObjects
-build_property.ProjectDir = C:\Users\Admin\Desktop\hk7\PRN221 bl3\FinalP\ToyStoreManagement\ToyStoreManagement\BussinessObjects\
+build_property.ProjectDir = D:\Githup\ToyStoreManagement\ToyStoreManagement\BussinessObjects\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

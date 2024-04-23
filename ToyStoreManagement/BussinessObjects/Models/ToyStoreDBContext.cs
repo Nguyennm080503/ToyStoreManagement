@@ -28,12 +28,7 @@ namespace BusinessObjects.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-<<<<<<< HEAD
                 optionsBuilder.UseSqlServer(GetConnectionString());
-=======
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=LAPTOP-F94U5LCU\\SQLEXPRESS;uid=sa;pwd=12345;database=ToyStoreDB;TrustServerCertificate=True;");
->>>>>>> binh
             }
         }
 
