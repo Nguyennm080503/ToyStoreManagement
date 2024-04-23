@@ -40,12 +40,17 @@ namespace ToyStoreManagement.Pages
                 string email = result.Principal.FindFirstValue(ClaimTypes.Email);
                 var account = _accountService.GetAccountByEmail(email);
 
-                if (account != null)
+                if (account != null && account.Status == 1)
                 {
                     HttpContext.Session.SetString("Name", account.Name);
                     HttpContext.Session.SetInt32("RoleId", (int)account.RoleId);
                     HttpContext.Session.SetInt32("AccountId", account.AccountId);
                     return RedirectToPage("/Index");
+                }
+                if (account != null && account.Status == 0)
+                {
+                    HttpContext.Session.SetString("Message", "Your email is blocked!");
+                    return RedirectToPage("/Login");
                 }
                 else
                 {

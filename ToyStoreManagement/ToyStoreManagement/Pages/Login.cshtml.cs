@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Security.Claims;
 using ToyStoreService.Interface;
 using Microsoft.AspNetCore.Identity;
+using System.Net.WebSockets;
 
 namespace ToyStoreManagement.Pages
 {
@@ -54,6 +55,17 @@ namespace ToyStoreManagement.Pages
 
                 }
             }
+        }
+        public async Task<IActionResult> OnGetAsync()
+        {
+            var message = HttpContext.Session.GetString("Message");
+            if(message != null)
+            {
+                Message = message;
+                HttpContext.Session.Remove("Message");
+                return Page();
+            }
+            return Page();
         }
 	}
 }

@@ -55,7 +55,6 @@ namespace ToyStoreManagement.Pages
 				if (isRegister)
 				{
 					return RedirectToPage("/Staffs");
-
 				}
 				else
 				{

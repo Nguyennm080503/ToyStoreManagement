@@ -10,6 +10,8 @@ namespace ToyStoreManagement.Pages
         private readonly IAccountService _accountService;
         public IEnumerable<Account> Accounts { get; set; }
         public int ListNumber { get; set; }
+        [BindProperty] public int AccountId { get; set; }
+        [BindProperty] public int Status { get; set; }
         public CustomersModel(IAccountService accountService)
         {
             _accountService = accountService;
@@ -27,6 +29,20 @@ namespace ToyStoreManagement.Pages
             {
                 return RedirectToPage("/Login");
             }
+        }
+
+        public async Task<IActionResult> OnPost()
+        {
+            Accounts = _accountService.GetAllCustomerAccounts();
+            ListNumber = Accounts.Count();
+            var account = _accountService.GetProfileAccount(AccountId);
+            account.Status = Status;
+            bool isChangeStatus = _accountService.UpdateProfileAccount(account);
+            if (isChangeStatus)
+            {
+                return Page();
+            }
+            return RedirectToPage("/Error");
         }
     }
 }

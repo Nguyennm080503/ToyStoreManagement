@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Wt9XBWg0yS4VEVf5P10NMCCNsfqPRASfBXdg2a+MRTM=",
+  "Hash": "pJdQXskz+N5gj+hLVgiQ3+EDEmzZU9chmlWhvkFfCgE=",
   "Source": "ToyStoreManagement",
   "BasePath": "_content/ToyStoreManagement",
   "Mode": "Default",
@@ -226,6 +226,25 @@
       "OriginalItemSpec": "wwwroot\\css\\dataTables.bootstrap4.min.css"
     },
     {
+      "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\css\\messagenotification.css",
+      "SourceId": "ToyStoreManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\",
+      "BasePath": "_content/ToyStoreManagement",
+      "RelativePath": "css/messagenotification.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\messagenotification.css"
+    },
+    {
       "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\css\\sb-admin-2.min.css",
       "SourceId": "ToyStoreManagement",
       "SourceType": "Discovered",
@@ -433,6 +452,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\jquery.min.js"
+    },
+    {
+      "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\jquery.notification.js",
+      "SourceId": "ToyStoreManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\",
+      "BasePath": "_content/ToyStoreManagement",
+      "RelativePath": "js/jquery.notification.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\jquery.notification.js"
     },
     {
       "Identity": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\main.js",

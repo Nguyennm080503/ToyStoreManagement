@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\css\\dataTables.bootstrap4.min.css"
     },
     {
+      "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\css\\messagenotification.css",
+      "PackagePath": "staticwebassets\\css\\messagenotification.css"
+    },
+    {
       "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\css\\sb-admin-2.min.css",
       "PackagePath": "staticwebassets\\css\\sb-admin-2.min.css"
     },
@@ -83,6 +87,10 @@
     {
       "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\jquery.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\jquery.notification.js",
+      "PackagePath": "staticwebassets\\js\\jquery.notification.js"
     },
     {
       "Id": "D:\\Githup\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreManagement\\wwwroot\\js\\main.js",

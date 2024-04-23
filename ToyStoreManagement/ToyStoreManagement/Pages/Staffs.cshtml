@@ -38,6 +38,8 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
+                        </div>
+                    <div class="col-sm-12 col-md-6">
                         <div class="d-sm-flex align-items-center justify-content-between mb-4">
                             <a href="/CreateStaff" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                                  Create New Staff
@@ -73,17 +75,34 @@
                                 }
                                 else
                                 {
-                                    <p style="color:red">Active</p>
+                                        <p style="color:red">Block</p>
                                 }
                             </td>
-                            <td></td>
+                                <td>
+                                    @if (account.Status == 1)
+                                    {
+                                        <form method="post">
+                                            <input name="Status" value="0" hidden/>
+                                            <input name="AccountId" value="@account.AccountId" hidden />
+                                            <button class="btn btn-primary">Block</button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <form method="post">
+                                            <input name="Status" value="1" hidden />
+                                            <input name="AccountId" value="@account.AccountId" hidden />
+                                            <button class="btn btn-primary">Active</button>
+                                        </form>
+                                    }
+                                </td>
                         </tr>
                     }
                 </tbody>
             </table>
                 <div class="row">
                     <div class="col-sm-12 col-md-5">
-                        <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing <span id="startEntry">1</span> to <span id="endEntry">10</span> of <span id="totalEntries">57</span> entries</div>
+                        <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing <span id="startEntry">1</span> to <span id="endEntry">10</span> of <span id="totalEntries">@Model.ListNumber</span> entries</div>
                     </div>
                     <div class="col-sm-12 col-md-7">
                         <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
