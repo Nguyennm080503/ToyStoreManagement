@@ -12,5 +12,10 @@ namespace ToyStoreRepository.Implement
         {
             return _orderDao.GetAll();
         }
+
+        public Order GetOrder(int id)
+        {
+            return _orderDao.GetDetail(id);
+        }
     }
 }

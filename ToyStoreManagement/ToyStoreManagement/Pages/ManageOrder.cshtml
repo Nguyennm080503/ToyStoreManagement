@@ -1,0 +1,158 @@
+﻿@page
+@model ToyStoreManagement.Pages.ManageOrderModel
+@{
+    ViewData["Title"] = "Order Management";
+}
+@{
+    var session = HttpContext.Session;
+    var name = session.GetString("Name");
+    var roleId = session.GetInt32("RoleId");
+    var accountId = session.GetInt32("AccountId");
+}
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Order List</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="dataTables_length" id="dataTable_length">
+                        <label>
+                            Show
+                            <select name="dataTable_length" aria-controls="dataTable" class="custom-select custom-select-sm form-control form-control-sm">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select> entries
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div id="dataTable_filter" class="dataTables_filter">
+                        <label>
+                            Search:<input type="search" class="form-control form-control-2xl" placeholder="" aria-controls="dataTable">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Order ID</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Order Date</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Customer Name</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Total Amount</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model.Orders)
+                    {
+                        <tr>
+                            <td>@order.OrderId</td>
+                            <td>@order.OrderDate</td>
+                            <td>@order.Customer.Name</td>
+                            <td>@order.TotalAmount</td>
+                            <td>
+                                @if (order.Status == 1)
+                                {
+                                    <p style="color:yellow">Pending</p>
+                                }
+                                @if (order.Status == 2)
+                                {
+                                    <p style="color:antiquewhite">Preparing</p>
+                                }
+                                @if (order.Status == 3)
+                                {
+                                    <strong style="color:aqua">Delivering</strong>
+                                }
+                                @if (order.Status == 4)
+                                {
+                                    <p style="color:green">Payment has been made</p>
+                                }
+                            </td>
+                            <td>
+                                    @if (order.Status == 1)
+                                    {
+                                        <form method="post">
+                                            <input name="Status" value="2" hidden />
+                                        <input name="ProductId" value="@order.OrderId" hidden />
+                                        <button class="btn btn-primary">Preparing</button>
+                                        </form>
+                                    }
+                                @if (order.Status == 2)
+                                    {
+                                        <form method="post">
+                                            <input name="Status" value="3" hidden />
+                                        <input name="ProductId" value="@order.OrderId" hidden />
+                                        <button class="btn btn-primary">Delivering</button>
+                                        </form>
+                                    }
+                                @if (order.Status == 3)
+                                {
+                                    <form method="post">
+                                        <input name="Status" value="4" hidden />
+                                        <input name="ProductId" value="@order.OrderId" hidden />
+                                        <button class="btn btn-primary">Paid</button>
+                                    </form>
+                                }
+                                <a href="/OrderDetails?OrderId=@order.OrderId" class="btn btn-primary">View detail</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-sm-12 col-md-5">
+                    <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing <span id="startEntry">1</span> to <span id="endEntry">10</span> of <span id="totalEntries">@Model.ListNumber</span> entries</div>
+                </div>
+                <div class="col-sm-12 col-md-7">
+                    <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+                        <ul class="pagination" id="paginationList">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/jquery.dataTables.min.js"></script>
+<script src="~/js/dataTables.bootstrap4.min.js"></script>
+<script src="~/js/datatables-demo.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var totalAccounts = @Model.ListNumber;
+
+        var displayLength = parseInt($("select[name='dataTable_length']").val());
+
+        var totalPages = Math.ceil(totalAccounts / displayLength);
+
+        $(".pagination").empty();
+
+        for (var i = 1; i <= totalPages; i++) {
+            if (i === 1) {
+                $(".pagination").append('<li class="paginate_button page-item active"><a href="#" aria-controls="dataTable" data-dt-idx="' + i + '" tabindex="0" class="page-link">' + i + '</a></li>');
+            } else {
+                $(".pagination").append('<li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="' + i + '" tabindex="0" class="page-link">' + i + '</a></li>');
+            }
+        }
+
+        $("select[name='dataTable_length']").change(function () {
+            displayLength = parseInt($(this).val());
+            totalPages = Math.ceil(totalAccounts / displayLength);
+            $(".pagination").empty();
+            for (var i = 1; i <= totalPages; i++) {
+                if (i === 1) {
+                    $(".pagination").append('<li class="paginate_button page-item active"><a href="#" aria-controls="dataTable" data-dt-idx="' + i + '" tabindex="0" class="page-link">' + i + '</a></li>');
+                } else {
+                    $(".pagination").append('<li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="' + i + '" tabindex="0" class="page-link">' + i + '</a></li>');
+                }
+            }
+        });
+    });
+</script>

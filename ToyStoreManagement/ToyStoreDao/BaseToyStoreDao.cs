@@ -22,12 +22,12 @@ namespace ToyStoreDao
             }
         }
 
-        public IEnumerable<T> GetAll()
+        public virtual IEnumerable<T> GetAll()
         {
             return _dbContext.Set<T>().ToList();
         }
 
-        public T GetDetail(int id)
+        public virtual T GetDetail(int id)
         {
             return _dbContext.Set<T>().Find(id);
         }

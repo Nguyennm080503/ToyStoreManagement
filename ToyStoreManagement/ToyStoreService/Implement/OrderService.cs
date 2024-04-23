@@ -17,5 +17,10 @@ namespace ToyStoreService.Implement
         {
             return _orderRepository.GetAllOrder();
         }
+
+        public Order GetOrder(int id)
+        {
+            return _orderRepository.GetOrder(id);
+        }
     }
 }

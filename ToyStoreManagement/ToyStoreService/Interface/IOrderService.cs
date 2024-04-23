@@ -5,5 +5,6 @@ namespace ToyStoreService.Interface
     public interface IOrderService
     {
         IEnumerable<Order> GetAllOrder();
+        Order GetOrder(int id);
     }
 }

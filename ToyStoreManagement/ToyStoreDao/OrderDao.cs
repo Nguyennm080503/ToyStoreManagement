@@ -1,4 +1,5 @@
 ﻿using BusinessObjects.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ToyStoreDao
 {
@@ -6,5 +7,14 @@ namespace ToyStoreDao
     {
         private readonly ToyStoreDBContext _dbContext;
         public OrderDao() { _dbContext = new ToyStoreDBContext(); }
+
+        public override IEnumerable<Order> GetAll()
+        {
+            return _dbContext.Orders.Include(x => x.Customer).ToList();
+        }
+        public override Order GetDetail(int id)
+        {
+            return _dbContext.Orders.Include(x => x.Customer).Where(x => x.OrderId == id).FirstOrDefault();
+        }
     }
 }
