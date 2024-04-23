@@ -17,5 +17,13 @@ namespace ToyStoreService.Implement
         {
             return _productRepository.GetAllProduct();
         }
+        public Product GetProductById(int id)
+        {
+            return _productRepository.GetProductById(id);
+        }
+        public bool UpdateQuantity(Product product)
+        {
+            return _productRepository.UpdateQuantity(product);
+        }
     }
 }

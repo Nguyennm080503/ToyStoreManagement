@@ -11,5 +11,10 @@ namespace ToyStoreDao
         {
             return _dbContext.Products.ToList();
         }
+        public Product GetProductById(int id)
+        {
+            return _dbContext.Products.FirstOrDefault(x => x.ProductId == id);
+        }
+        
     }
 }

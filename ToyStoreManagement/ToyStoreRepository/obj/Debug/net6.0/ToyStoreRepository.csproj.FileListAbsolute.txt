@@ -39,3 +39,20 @@ D:\PRN221\ok\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\
 D:\PRN221\ok\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\refint\ToyStoreRepository.dll
 D:\PRN221\ok\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.pdb
 D:\PRN221\ok\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ref\ToyStoreRepository.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreRepository.deps.json
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreRepository.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreRepository.pdb
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\BusinessObjects.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreDao.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\ToyStoreDao.pdb
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\bin\Debug\net6.0\BusinessObjects.pdb
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.csproj.AssemblyReference.cache
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.AssemblyInfoInputs.cache
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.AssemblyInfo.cs
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.csproj.CoreCompileInputs.cache
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.csproj.CopyComplete
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\refint\ToyStoreRepository.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ToyStoreRepository.pdb
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreRepository\obj\Debug\net6.0\ref\ToyStoreRepository.dll

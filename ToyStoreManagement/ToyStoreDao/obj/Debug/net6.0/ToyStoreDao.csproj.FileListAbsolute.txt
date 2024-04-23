@@ -35,3 +35,18 @@ D:\PRN221\ok\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\
 D:\PRN221\ok\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\refint\ToyStoreDao.dll
 D:\PRN221\ok\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.pdb
 D:\PRN221\ok\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ref\ToyStoreDao.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\bin\Debug\net6.0\ToyStoreDao.deps.json
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\bin\Debug\net6.0\ToyStoreDao.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\bin\Debug\net6.0\ToyStoreDao.pdb
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\bin\Debug\net6.0\BusinessObjects.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\bin\Debug\net6.0\BusinessObjects.pdb
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.csproj.AssemblyReference.cache
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.AssemblyInfoInputs.cache
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.AssemblyInfo.cs
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.csproj.CoreCompileInputs.cache
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.csproj.CopyComplete
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\refint\ToyStoreDao.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ToyStoreDao.pdb
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\ToyStoreDao\obj\Debug\net6.0\ref\ToyStoreDao.dll
