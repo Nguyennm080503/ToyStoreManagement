@@ -19,8 +19,9 @@ namespace ToyStoreManagement.Pages.FeedbackPage
             this.feedbackService = feedbackService;
         }
 
-        public IList<Feedback> Feedback { get; set; } = default!;
+        public IEnumerable<Feedback> Feedback { get; set; } = default!;
         public IEnumerable<Product> Products { get; set; }
+        public string Message { get; set; }
         [BindProperty(SupportsGet = true)]
         public int ProductId { get; set; }
         [BindProperty]
@@ -28,16 +29,14 @@ namespace ToyStoreManagement.Pages.FeedbackPage
         public int ListNumber { get; set; }
         public async Task<IActionResult> OnGetAsync()
         {
-            if (feedbackService.GetAllFeedback() != null)
+            var feedback = feedbackService.GetFeedbackByProductId(ProductId);
+            if (feedback == null)
             {
-                Feedback = feedbackService.GetAllFeedback().OrderByDescending(x => x.ProductId).ToList();
-                ListNumber = Feedback.Count();
-                return Page();
+                Feedback = new List<Feedback>();
+                Message = "No feedback available for this product.";
             }
-            else
-            {
-                return RedirectToPage("/Feedback");
-            }
+            Feedback = feedback;
+            return Page();
         }
     }
 }
