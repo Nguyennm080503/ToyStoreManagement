@@ -33,7 +33,7 @@ namespace ToyStoreManagement.Pages.FeedbackPage
                 bool check = feedbackService.DeleteFeedback(id);
                 if (check)
                 {
-                    return RedirectToPage("/Feedback");
+                    return RedirectToPage("/FeedbackPage/Feedback");
                 }
                 else
                 {
