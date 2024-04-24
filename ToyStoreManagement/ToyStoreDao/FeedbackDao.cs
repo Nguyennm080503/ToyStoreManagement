@@ -17,5 +17,9 @@ namespace ToyStoreDao
         {
             return _dbContext.Feedbacks.Include(f => f.Customer).Include(f => f.Product).FirstOrDefault(f => f.FeedbackId == id);
         }
+        public override IEnumerable<Feedback> GetAll()
+        {
+            return _dbContext.Feedbacks.Include(f => f.Customer).Include(_f => _f.Product).ToList();
+        }
     }
 }
