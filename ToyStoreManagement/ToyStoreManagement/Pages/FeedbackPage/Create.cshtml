@@ -9,16 +9,6 @@
     <h2 class="my-4">Create New Feedback</h2>
     <form method="post" enctype="multipart/form-data">
         <div class="mb-3">
-            <label for="customerId" class="form-label">Customer</label>
-            <select id="customerId" name="CustomerId" class="form-select">
-                <option value="">Select Customer</option>
-                @foreach (var customer in Model.Accounts)
-                {
-                    <option value="@customer.AccountId">@customer.Name</option>
-                }
-            </select>
-        </div>
-        <div class="mb-3">
             <label for="productId" class="form-label">Product</label>
             <select id="productId" name="ProductId" class="form-select">
                 <option value="">Select Product</option>

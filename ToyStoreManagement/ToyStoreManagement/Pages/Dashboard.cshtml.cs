@@ -45,6 +45,7 @@ namespace ToyStoreManagement.Pages
                 OrderDate = new DateTime(1, g.Key, 1),
                 TotalAmount = g.Sum(x => x.TotalAmount),
             }).ToList();
+            FeedbackNumber = _feedbackService.GetAllFeedback().Count();
             return Page();
         }
     }
