@@ -4,13 +4,19 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using ToyStoreManagement.Extension;
+using ToyStoreService.Implement;
+using ToyStoreService.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 	
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddService();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
+builder.Services.AddDbContext<ToyStoreDBContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddAuthentication(option =>
 {
