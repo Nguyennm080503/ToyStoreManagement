@@ -5,5 +5,7 @@ namespace ToyStoreRepository.Interface
     public interface IOrderDetailRepository
     {
         bool AddOrderDetails(IList<OrderDetail> orderDetails);
+
+        public IEnumerable<OrderDetail> GetAllOrderDetail();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using BusinessObjects.Models;
+using ToyStoreRepository.Implement;
 using ToyStoreRepository.Interface;
 using ToyStoreService.Interface;
 
@@ -15,6 +16,11 @@ namespace ToyStoreService.Implement
         public bool AddOrderDetails(IList<OrderDetail> orderDetails)
         {
             return _orderdetailRepository.AddOrderDetails(orderDetails);
+        }
+
+        public IEnumerable<OrderDetail> GetAllOrderDetail()
+        {
+            return _orderdetailRepository.GetAllOrder();
         }
     }
 }

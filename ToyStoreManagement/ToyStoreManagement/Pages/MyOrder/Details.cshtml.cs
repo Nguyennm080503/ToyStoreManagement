@@ -6,36 +6,35 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using BusinessObjects.Models;
+using ToyStoreRepository.Interface;
 
 namespace ToyStoreManagement.Pages.MyOrder
 {
     public class DetailsModel : PageModel
     {
-        private readonly BusinessObjects.Models.ToyStoreDBContext _context;
+        private readonly IOrderRepository _repo;
 
-        public DetailsModel(BusinessObjects.Models.ToyStoreDBContext context)
+        public DetailsModel(IOrderRepository repo)
         {
-            _context = context;
+            _repo = repo;
         }
 
-      public Order Order { get; set; } = default!; 
+        public IList<Order> Order { get; set; } = default!;
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task<IActionResult> OnGetAsync(int id)
         {
-            if (id == null || _context.Orders == null)
+            string role = HttpContext.Session.GetString("ROLE");
+            if (string.IsNullOrEmpty(role))
             {
-                return NotFound();
+                return RedirectToPage("/Error");
             }
 
-            var order = await _context.Orders.FirstOrDefaultAsync(m => m.OrderId == id);
-            if (order == null)
+            if (id == null)
             {
                 return NotFound();
             }
-            else 
-            {
-                Order = order;
-            }
+            Order = _repo.GetAllOrder(id).ToList();
+
             return Page();
         }
     }
