@@ -104,7 +104,7 @@ namespace ToyStoreManagement.Pages.Toy
                 TempData["Message"] = "Add product to cart successfully";
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Details", new { id = productId });
         }
     }
 }
