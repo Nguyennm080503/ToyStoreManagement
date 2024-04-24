@@ -9,99 +9,97 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ToyStoreManagement
 build_property.RootNamespace = ToyStoreManagement
-build_property.ProjectDir = D:\PRN221\ok\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\Dell\source\repos\Workspace\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\PRN221\ok\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement
+build_property.MSBuildProjectDirectory = C:\Users\Dell\source\repos\Workspace\ToyStoreManagement\ToyStoreManagement\ToyStoreManagement
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/CreateStaff.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/CreateStaff.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlU3RhZmYuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Customers.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Customers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Dashboard.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Error.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/FeedbackPage/Create.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/FeedbackPage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVlZGJhY2tQYWdlXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/FeedbackPage/Delete.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/FeedbackPage/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVlZGJhY2tQYWdlXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/FeedbackPage/Details.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/FeedbackPage/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVlZGJhY2tQYWdlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/FeedbackPage/Edit.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/FeedbackPage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVlZGJhY2tQYWdlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/FeedbackPage/Feedback.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/FeedbackPage/Feedback.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVlZGJhY2tQYWdlXEZlZWRiYWNrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Index.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Login.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/LoginByGoogle.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/LoginByGoogle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5CeUdvb2dsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Logout.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/MyProfile.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/MyProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Privacy.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Register.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Staffs.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Staffs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Toy.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Toy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG95LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/_ViewImports.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/_ViewStart.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/ok/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Shared/_Layout.cshtml]
+[C:/Users/Dell/source/repos/Workspace/ToyStoreManagement/ToyStoreManagement/ToyStoreManagement/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2968kd8hu9
