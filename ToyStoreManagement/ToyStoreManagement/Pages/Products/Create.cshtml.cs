@@ -48,7 +48,6 @@ namespace ToyStoreManagement.Pages.Products
 		[BindProperty] public string Thumbnail { get; set; }
 
 
-		// To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
 		public async Task<IActionResult> OnPostAsync()
         {
             if(_service.GetAllProducts().Any(x => x.Name == Name))
