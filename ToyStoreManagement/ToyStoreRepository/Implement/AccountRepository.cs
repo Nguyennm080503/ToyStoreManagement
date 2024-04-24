@@ -23,6 +23,11 @@ namespace ToyStoreRepository.Implement
 			return _accountDao.GetAccountByUsername(username);
 		}
 
+        public IEnumerable<Account> GetAllAccounts()
+        {
+            return _accountDao.GetAllAccounts();
+        }
+
         public IEnumerable<Account> GetAllCustomerAccounts()
         {
 			return _accountDao.GetAll().Where(x => x.RoleId == 3).OrderByDescending(x => x.AccountId).ToList();

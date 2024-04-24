@@ -49,5 +49,10 @@ namespace ToyStoreService.Implement
         {
             return _accountRepository.UpdateProfileAccount(account);
         }
+
+        public IEnumerable<Account> GetAllAccounts()
+        {
+            return _accountRepository.GetAllAccounts();
+        }
     }
 }

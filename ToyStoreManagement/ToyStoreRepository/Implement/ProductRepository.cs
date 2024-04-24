@@ -6,6 +6,7 @@ namespace ToyStoreRepository.Implement
 {
     public class ProductRepository : IProductRepository
     {
+<<<<<<< HEAD
         private readonly ProductDao _productDao;
         public ProductRepository()
         {
@@ -17,5 +18,26 @@ namespace ToyStoreRepository.Implement
         public void DeleteProduct(int productId) => _productDao.DeleteProduct(productId);
         public List<Product> GetAllProducts() => _productDao.GetAllProducts();
         public List<Product> SearchProducts(string? name, decimal? minPrice, decimal? maxPrice, string? category) => _productDao.SearchProducts(name, minPrice, maxPrice, category);
+=======
+        private readonly ProductDao productDao;
+
+        public ProductRepository()
+        {
+            productDao = new ProductDao();
+        }
+
+        public IEnumerable<Product> GetAllProduct()
+        {
+            return productDao.GetAllProduct();
+        }
+        public Product GetProductById(int id)
+        {
+            return productDao.GetProductById(id);
+        }
+        public bool UpdateQuantity(Product product)
+        {
+            return productDao.Update(product);
+        }
+>>>>>>> origin/tai_cart
     }
 }
