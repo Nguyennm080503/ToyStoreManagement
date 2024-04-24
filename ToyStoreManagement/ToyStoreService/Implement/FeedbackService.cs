@@ -38,6 +38,11 @@ namespace ToyStoreService.Implement
             return _feedbackRepository.GetFeedbackById(id);
         }
 
+        public IEnumerable<Feedback> GetFeedbackByProductId(int productId)
+        {
+            return _feedbackRepository.GetFeedbackByProductId(productId);
+        }
+
         public bool UpdateFeedback(Feedback feedback)
         {
             return _feedbackRepository.UpdateFeedback(feedback);
