@@ -13,32 +13,26 @@ namespace ToyStoreManagement.Pages.MyOrder
 {
     public class IndexModel : PageModel
     {
-        private readonly IOrderDetailRepository _repo;
+        private readonly IOrderService orderService;
 
-        public IndexModel(IOrderDetailRepository repo)
+        public IndexModel(IOrderService order)
         {
-            _repo = repo;
+            orderService = order;
+            
+        }
+        public IList<Order> Order { get; set; } = default!;
+        public async Task OnGetAsync()
+        {
+            var id = HttpContext.Session.GetInt32("AccountId"); 
+            if(id == null)
+            {
+                RedirectToPage("/Login");
+            }
+            Order = (IList<Order>)orderService.GetOrderByCustomerId((int)id);
         }
 
-        public string search;
 
-        public IList<OrderDetail> OrderDetail { get; set; } = default!;
 
-        public async Task<IActionResult> OnGetAsync(int id)
-        {
-            string role = HttpContext.Session.GetString("ROLE");
-            if (string.IsNullOrEmpty(role))
-            {
-                return RedirectToPage("/Error");
-            }
 
-            if (id == null)
-            {
-                return NotFound();
-            }
-            OrderDetail = _repo.GetAllOrderDetail(id).ToList();
-
-            return Page();
-        }
     }
 }

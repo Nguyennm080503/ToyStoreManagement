@@ -18,9 +18,9 @@ namespace ToyStoreService.Implement
             return _orderdetailRepository.AddOrderDetails(orderDetails);
         }
 
-        public IEnumerable<OrderDetail> GetAllOrderDetail()
+        public IEnumerable<OrderDetail> GetAllOrderDetail(int id)
         {
-            return _orderdetailRepository.GetAllOrder();
+            return _orderdetailRepository.GetAllOrderDetail(id);
         }
     }
 }

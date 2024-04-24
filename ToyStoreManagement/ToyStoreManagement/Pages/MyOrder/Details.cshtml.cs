@@ -7,19 +7,20 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using BusinessObjects.Models;
 using ToyStoreRepository.Interface;
+using ToyStoreService.Interface;
 
 namespace ToyStoreManagement.Pages.MyOrder
 {
     public class DetailsModel : PageModel
     {
-        private readonly IOrderRepository _repo;
+        private readonly IOrderDetailService detailService;
 
-        public DetailsModel(IOrderRepository repo)
+        public DetailsModel(IOrderDetailService _detailService)
         {
-            _repo = repo;
+            detailService = _detailService;
         }
 
-        public IList<Order> Order { get; set; } = default!;
+        public IList<OrderDetail> OrderDetail { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int id)
         {
@@ -33,7 +34,7 @@ namespace ToyStoreManagement.Pages.MyOrder
             {
                 return NotFound();
             }
-            Order = _repo.GetAllOrder(id).ToList();
+            OrderDetail = detailService.GetAllOrderDetail(id).ToList();
 
             return Page();
         }

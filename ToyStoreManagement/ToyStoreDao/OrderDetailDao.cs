@@ -1,5 +1,5 @@
 ﻿using BusinessObjects.Models;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace ToyStoreDao
 {
@@ -22,9 +22,9 @@ namespace ToyStoreDao
             
         }
 
-        public override IEnumerable<OrderDetail> GetAllOrderDetail()
+        public IEnumerable<OrderDetail> GetAllOrderDetail(int id)
         {
-            return _dbContext.Orders.Include(x => x.Customer).ToList();
+            return (IEnumerable<OrderDetail>)_dbContext.Orders.Where(x => x.OrderId == id).ToList();
         }
     }
 }

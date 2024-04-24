@@ -6,6 +6,6 @@ namespace ToyStoreService.Interface
     {
         bool AddOrderDetails(IList<OrderDetail> orderDetails);
 
-        public IEnumerable<OrderDetail> GetAllOrderDetail();
+        public IEnumerable<OrderDetail> GetAllOrderDetail(int id);
     }
 }

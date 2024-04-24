@@ -17,9 +17,9 @@ namespace ToyStoreRepository.Implement
             return _orderDetailDao.AddOrderDetails(orderDetails);
         }
 
-        public IEnumerable<OrderDetail> GetAllOrderDetail()
+        public IEnumerable<OrderDetail> GetAllOrderDetail(int id)
         {
-            return _orderDetailDao.GetAll();
+            return _orderDetailDao.GetAllOrderDetail(id);
         }
     }
 }

@@ -2315,23 +2315,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dell\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\kuroy\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\Workspace\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj",
+      "projectUniqueName": "C:\\Users\\kuroy\\OneDrive\\Desktop\\SE Materials\\Block 3W\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj",
       "projectName": "ToyStoreRepository",
-      "projectPath": "C:\\Users\\Dell\\source\\repos\\Workspace\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj",
-      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dell\\source\\repos\\Workspace\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\obj\\",
+      "projectPath": "C:\\Users\\kuroy\\OneDrive\\Desktop\\SE Materials\\Block 3W\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\ToyStoreRepository.csproj",
+      "packagesPath": "C:\\Users\\kuroy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kuroy\\OneDrive\\Desktop\\SE Materials\\Block 3W\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreRepository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kuroy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2340,15 +2342,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Dell\\source\\repos\\Workspace\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj": {
-              "projectPath": "C:\\Users\\Dell\\source\\repos\\Workspace\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj"
+            "C:\\Users\\kuroy\\OneDrive\\Desktop\\SE Materials\\Block 3W\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj": {
+              "projectPath": "C:\\Users\\kuroy\\OneDrive\\Desktop\\SE Materials\\Block 3W\\ToyStoreManagement\\ToyStoreManagement\\ToyStoreDao\\ToyStoreDao.csproj"
             }
           }
         }
@@ -2378,7 +2379,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

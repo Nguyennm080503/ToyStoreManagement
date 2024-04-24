@@ -41,3 +41,17 @@ C:\Users\Dell\source\repos\Workspace\ToyStoreManagement\ToyStoreManagement\Bussi
 C:\Users\Dell\source\repos\Workspace\ToyStoreManagement\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.pdb
 C:\Users\Dell\source\repos\Workspace\ToyStoreManagement\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.genruntimeconfig.cache
 C:\Users\Dell\source\repos\Workspace\ToyStoreManagement\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\ref\BusinessObjects.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\BussinessObjects\bin\Debug\net6.0\BusinessObjects.deps.json
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\BussinessObjects\bin\Debug\net6.0\BusinessObjects.runtimeconfig.json
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\BussinessObjects\bin\Debug\net6.0\BusinessObjects.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\BussinessObjects\bin\Debug\net6.0\BusinessObjects.pdb
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.csproj.AssemblyReference.cache
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.AssemblyInfoInputs.cache
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.AssemblyInfo.cs
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.csproj.CoreCompileInputs.cache
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\refint\BusinessObjects.dll
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.pdb
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\BusinessObjects.genruntimeconfig.cache
+C:\Users\kuroy\OneDrive\Desktop\SE Materials\Block 3W\ToyStoreManagement\ToyStoreManagement\BussinessObjects\obj\Debug\net6.0\ref\BusinessObjects.dll
