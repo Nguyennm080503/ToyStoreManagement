@@ -21,7 +21,8 @@ namespace ToyStoreManagement.Pages.FeedbackPage
             this.accountService = accountService;
             this.productService = productService;
         }
-
+        [BindProperty]
+        public int AccountId { get; set; }
         [BindProperty]
         public int ProductId { get; set; }
         [BindProperty]
@@ -66,19 +67,21 @@ namespace ToyStoreManagement.Pages.FeedbackPage
 
         public async Task<IActionResult> OnPost()
         {
-            var accountid = HttpContext.Session.GetInt32("AccountId");
             Feedback feedback = new Feedback();
-            feedback.CustomerId = accountid;
+            feedback.CustomerId = AccountId;
             feedback.ProductId = ProductId;
             feedback.FeedbackText = FeedbackText;
             feedback.FeedbackDate = DateTime.Now;
             try
             {
                 bool check = false;
-                check = feedbackService.CreateFeedback(feedback);
+                if (ModelState.IsValid)
+                {
+                    check = feedbackService.CreateFeedback(feedback);
+                }
                 if (check)
                 {
-                    return RedirectToPage("/FeedbackPage/Feedback");
+                    return RedirectToPage("/Feedback");
                 }
                 else
                 {

@@ -33,10 +33,6 @@ namespace ToyStoreRepository.Implement
         {
             return _feedbackDao.Delete(id);
         }
-        public IEnumerable<Feedback> GetFeedbackByCustomerId(int customerId)
-        {
-            return _feedbackDao.GetAll().Where(f => f.CustomerId == customerId).ToList();
-        }
 
     }
 }
