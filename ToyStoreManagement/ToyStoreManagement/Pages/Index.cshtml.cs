@@ -1,20 +1,33 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessObjects.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace ToyStoreManagement.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ToyStoreDBContext _context;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(ToyStoreDBContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
-        public void OnGet()
-        {
+        public IList<Category> Categories { get; set; } = default!;
+        public IList<Product> Products { get; set; } = default!;
 
+        public async Task OnGetAsync()
+        {
+            if (_context.Categories != null)
+            {
+                Categories = await _context.Categories.ToListAsync();
+            }
+
+            if (_context.Products != null)
+            {
+                Products = await _context.Products.ToListAsync();
+            }
         }
     }
 }

@@ -7,23 +7,38 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using BusinessObjects.Models;
 using ToyStoreService.Interface;
+using ToyStoreRepository.Interface;
 
 namespace ToyStoreManagement.Pages.MyOrder
 {
     public class IndexModel : PageModel
     {
-        private readonly IOrderService orderService;
+        private readonly IOrderDetailRepository _repo;
 
-        public IndexModel(IOrderService order)
+        public IndexModel(IOrderDetailRepository repo)
         {
-            orderService = order;
+            _repo = repo;
         }
 
-        public IList<Order> Order { get;set; } = default!;
-        public async Task OnGetAsync()
+        public string search;
+
+        public IList<OrderDetail> OrderDetail { get; set; } = default!;
+
+        public async Task<IActionResult> OnGetAsync(int id)
         {
-            var id = HttpContext.Session.GetInt32("AccountId");
-           Order = (IList<Order>)orderService.GetOrderByCustomerId((int)id);
+            string role = HttpContext.Session.GetString("ROLE");
+            if (string.IsNullOrEmpty(role))
+            {
+                return RedirectToPage("/Error");
+            }
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+            OrderDetail = _repo.GetAllOrderDetail(id).ToList();
+
+            return Page();
         }
     }
 }

@@ -21,5 +21,10 @@ namespace ToyStoreDao
             }
             
         }
+
+        public override IEnumerable<OrderDetail> GetAllOrderDetail()
+        {
+            return _dbContext.Orders.Include(x => x.Customer).ToList();
+        }
     }
 }
