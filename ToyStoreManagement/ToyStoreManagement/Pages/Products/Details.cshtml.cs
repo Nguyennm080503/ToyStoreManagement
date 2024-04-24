@@ -55,7 +55,8 @@ namespace ToyStoreManagement.Pages.Products
 			}
 			else
 			{
-				var product = _service.GetProductById(Id);
+                Categories = _categoryService.GetAllCategory();
+                var product = _service.GetProductById(Id);
 				product.Name = Name;
 				product.Price = Price;
 				product.CategoryId = CategoryId;
@@ -63,7 +64,8 @@ namespace ToyStoreManagement.Pages.Products
 				product.StockQuantity = StockQuantity;
 				product.Status = 1;
 				_service.UpdateProduct(product);
-				return Page();
+                Product = product;
+				return RedirectToPage("/ManageProduct");
 			}
 		}
 	}
