@@ -52,7 +52,7 @@ namespace ToyStoreManagement.Pages.FeedbackPage
                 return NotFound();
             }
             Feedback = feedback;
-            Products = productService.GetAllProduct().ToList();
+            Products = productService.GetAllProducts().ToList();
             Accounts = accountService.GetAllAccounts().ToList();
             return Page();
         }
@@ -80,7 +80,7 @@ namespace ToyStoreManagement.Pages.FeedbackPage
                 else
                 {
                     Accounts = accountService.GetAllAccounts();
-                    Products = productService.GetAllProduct();
+                    Products = productService.GetAllProducts();
                     Message = "";
                     return Page();
                 }
@@ -88,7 +88,7 @@ namespace ToyStoreManagement.Pages.FeedbackPage
             catch (Exception ex)
             {
                 Accounts = accountService.GetAllAccounts();
-                Products = productService.GetAllProduct();
+                Products = productService.GetAllProducts();
                 Message = ex.Message;
                 return Page();
             }

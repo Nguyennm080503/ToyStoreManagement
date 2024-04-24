@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
 using BusinessObjects.Models;
 using ToyStoreService.Interface;
 using ToyStoreManagement.View_Models;
@@ -26,7 +21,7 @@ namespace ToyStoreManagement.Pages.Toy
         public async Task OnGetAsync()
         {
 
-            Product = (IList<Product>)productService.GetAllProduct();
+            Product = (IList<Product>)productService.GetAllProducts();
         }
         public async Task<IActionResult> OnPostAddToCartAsync([FromForm] int productId)
         {

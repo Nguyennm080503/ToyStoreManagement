@@ -8,7 +8,6 @@ namespace ToyStoreDao
     {
         private readonly ToyStoreDBContext _dbContext;
         public ProductDao() { _dbContext = new ToyStoreDBContext(); }
-<<<<<<< HEAD
 
         public void AddProduct(Product product)
         {
@@ -75,17 +74,6 @@ namespace ToyStoreDao
             }
 
             return query.ToList();
-        }
-=======
-        public IEnumerable<Product> GetAllProduct()
-        {
-            return _dbContext.Products.ToList();
-        }
-        public Product GetProductById(int id)
-        {
-            return _dbContext.Products.FirstOrDefault(x => x.ProductId == id);
-        }
-        
->>>>>>> origin/tai_cart
+        }        
     }
 }

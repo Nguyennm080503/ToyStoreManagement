@@ -4,6 +4,9 @@
 @{
     ViewData["Title"] = "Create Product";
 }
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
 
 <div class="row">
 	<div class="col-12">
@@ -48,14 +51,14 @@
 				<div class="col-xxl-4">
 					<div class="bg-secondary-soft px-4 py-5 rounded">
 						<div class="row g-3">
-							<h4 class="mb-4 mt-0">Upload thumbnai product photo</h4>
+							<h4 class="mb-4 mt-0">Upload thumbnai</h4>
 							<div class="text-center">
 								<div class="square position-relative display-2 mb-3">
-									<i class="fas fa-fw fa-user position-absolute top-50 start-50 translate-middle text-secondary"></i>
+									<img id="thumbnailImage" src="#" alt="Thumbnail" style="width:300px;height:300px;display:none;">
 								</div>
 								<input type="file" id="customFile" name="Thumbnail" hidden="">
 								<label class="btn btn-success-soft btn-block" for="customFile">Upload</label>
-								<button type="button" class="btn btn-danger-soft">Remove</button>
+								<label class="btn btn-success btn-block" for="customFile">Upload</label>
 								<p class="text-muted mt-3 mb-0"><span class="me-1">Note:</span>Minimum size 300px x 300px</p>
 							</div>
 						</div>
@@ -69,3 +72,18 @@
 		</form>
 	</div>
 </div>
+
+<script>
+		document.getElementById('customFile').addEventListener('change', function () {
+		var file = this.files[0];
+		if (file) {
+		var reader = new FileReader();
+		reader.onload = function (e) {
+		var image = document.getElementById('thumbnailImage');
+		image.src = e.target.result;
+		image.style.display = 'block';
+		};
+		reader.readAsDataURL(file);
+		}
+		});
+</script>

@@ -7,7 +7,6 @@ namespace ToyStoreDao
     {
         private readonly ToyStoreDBContext _dbContext;
         public OrderDao() { _dbContext = new ToyStoreDBContext(); }
-<<<<<<< HEAD
 
         public override IEnumerable<Order> GetAll()
         {
@@ -17,12 +16,10 @@ namespace ToyStoreDao
         {
             return _dbContext.Orders.Include(x => x.Customer).Where(x => x.OrderId == id).FirstOrDefault();
         }
-=======
         public IEnumerable<Order> GetOrderByCustomerId(int customerId)
         {
             return _dbContext.Orders.AsQueryable().Include(c => c.Customer).Where(x => x.CustomerId == customerId).ToList();
         }
 
->>>>>>> origin/tai_cart
     }
 }
