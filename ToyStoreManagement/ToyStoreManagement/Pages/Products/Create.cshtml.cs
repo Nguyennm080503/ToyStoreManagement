@@ -26,9 +26,18 @@ namespace ToyStoreManagement.Pages.Products
 
         public async Task<IActionResult> OnGet()
         {
-            Categories = _categoryService.GetAllCategory();
 
-			return Page();
+            var roleId = HttpContext.Session.GetInt32("RoleId");
+            if (roleId == 1 || roleId == 2)
+            {
+                Categories = _categoryService.GetAllCategory();
+
+                return Page();
+            }
+            else
+            {
+                return RedirectToPage("/Login");
+            }
         }
 
 		[BindProperty] public string Name { get; set; }

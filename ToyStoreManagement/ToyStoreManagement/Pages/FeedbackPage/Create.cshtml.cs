@@ -22,8 +22,6 @@ namespace ToyStoreManagement.Pages.FeedbackPage
             this.productService = productService;
         }
         [BindProperty]
-        public int AccountId { get; set; }
-        [BindProperty]
         public int ProductId { get; set; }
         [BindProperty]
         public string FeedbackText { get; set; }
@@ -67,8 +65,9 @@ namespace ToyStoreManagement.Pages.FeedbackPage
 
         public async Task<IActionResult> OnPost()
         {
+            var accountid = HttpContext.Session.GetInt32("AccountId");
             Feedback feedback = new Feedback();
-            feedback.CustomerId = AccountId;
+            feedback.CustomerId = accountid;
             feedback.ProductId = ProductId;
             feedback.FeedbackText = FeedbackText;
             feedback.FeedbackDate = DateTime.Now;

@@ -55,7 +55,7 @@ namespace ToyStoreManagement.Pages.Products
 			}
 			else
 			{
-				var product = _service.GetProductById(ProductId);
+				var product = _service.GetProductById(Id);
 				product.Name = Name;
 				product.Price = Price;
 				product.CategoryId = CategoryId;
