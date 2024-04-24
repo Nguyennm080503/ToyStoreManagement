@@ -21,6 +21,7 @@ namespace ToyStoreManagement.Pages.FeedbackPage
             this.accountService = accountService;
             this.productService = productService;
         }
+
         [BindProperty]
         public int ProductId { get; set; }
         [BindProperty]
@@ -37,22 +38,17 @@ namespace ToyStoreManagement.Pages.FeedbackPage
         {
             try
             {
-                if (Feedback == null)
+                var roleId = HttpContext.Session.GetInt32("RoleId");
+                if (Accounts == null && Products == null && roleId == 3)
                 {
                     Feedback = new Feedback();
-                }
-
-                if (Accounts == null && Products == null)
-                {
                     Products = productService.GetAllProducts().ToList();
                     Accounts = accountService.GetAllAccounts().ToList();
                 }
-
-                if (Accounts == null)
+                else
                 {
                     return Page();
                 }
-
                 return Page();
             }
             catch (Exception ex)
@@ -74,13 +70,10 @@ namespace ToyStoreManagement.Pages.FeedbackPage
             try
             {
                 bool check = false;
-                if (ModelState.IsValid)
-                {
-                    check = feedbackService.CreateFeedback(feedback);
-                }
+                check = feedbackService.CreateFeedback(feedback);
                 if (check)
                 {
-                    return RedirectToPage("/Feedback");
+                    return RedirectToPage("/FeedbackPage/Feedback");
                 }
                 else
                 {

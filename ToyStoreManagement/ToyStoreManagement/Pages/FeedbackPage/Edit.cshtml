@@ -9,21 +9,13 @@
     <p class="display-4" style="font-size: 1.3rem; font-weight: 500;"> Update Feedback</p>
     <div class="ps-5 ms-5">
         <form method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="FeedbackId" />
             <div class="d-flex mt-2" style="font-size: 0.8rem;">
                 <div>
-                    <p class="px-2 ps-0 my-0" style="font-size: 0.8rem; font-weight: bolder;"> Customer </p>
                     <p class="px-2 ps-0 my-0" style="font-size: 0.8rem; font-weight: bolder;"> Product </p>
-                    <p class="px-2 ps-0 my-0 mt-2 pt-1" style="font-size: 0.8rem; font-weight: bolder;"> FeedText </p>
+                    <p class="px-2 ps-0 my-0 mt-2 pt-1" style="font-size: 0.8rem; font-weight: bolder;"> Feedback </p>
                 </div>
                 <div class="mx-3">
-                    <div>
-                        <select name="CustomerId" style="border-radius: 3px; border: 1px solid #dfe0e2;" class="px-2 mt-2">
-                            @foreach (var type in Model.Accounts)
-                            {
-                                <option value="@type.AccountId" selected="@Model.Feedback.CustomerId == type.AccountId"> @type.Name </option>
-                            }
-                        </select>
-                    </div>
                     <div>
                         <select name="ProductId" style="border-radius: 3px; border: 1px solid #dfe0e2;" class="px-2 mt-2">
                             @foreach (var type in Model.Products)
@@ -33,7 +25,7 @@
                         </select>
                     </div>
                     <div>
-                        <input type="text" name="Description" style="border-radius: 3px; border: 1px solid #dfe0e2;" class="px-2 mt-2" value="@Model.Feedback.FeedbackText" />
+                        <input type="text" name="FeedbackText" style="border-radius: 3px; border: 1px solid #dfe0e2;" class="px-2 mt-2" value="@Model.Feedback.FeedbackText" />
                     </div>
 
                     <p id="error-message" class="text-danger mt-2"> @Model.Message </p>
