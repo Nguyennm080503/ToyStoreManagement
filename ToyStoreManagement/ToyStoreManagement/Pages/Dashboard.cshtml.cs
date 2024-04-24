@@ -35,6 +35,7 @@ namespace ToyStoreManagement.Pages
             CustomerNumber = _accountService.GetAllCustomerAccounts().Count();
             ProductNumber = _productService.GetAllProducts().Count();
             MoneyTotal = (decimal)_orderService.GetAllOrder().Sum(x => x.TotalAmount);
+            FeedbackNumber = _feedbackService.GetAllFeedback().Count();
             ProductCountEachCategory = _productService.GetAllProducts().GroupBy(x => x.CategoryId).Select(g => new ProductCount
             {
                 CategoryName = _categoryService.GetAllCategory().Where(x => x.CategoryId == g.Key).FirstOrDefault().Name,

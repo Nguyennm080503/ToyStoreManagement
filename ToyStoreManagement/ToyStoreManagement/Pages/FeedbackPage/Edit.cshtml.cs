@@ -25,8 +25,6 @@ namespace ToyStoreManagement.Pages.FeedbackPage
         [BindProperty]
         public int FeedbackId { get; set; }
         [BindProperty]
-        public int AccountId { get; set; }
-        [BindProperty]
         public int ProductId { get; set; }
         [BindProperty]
         public string FeedbackText { get; set; }
@@ -41,41 +39,37 @@ namespace ToyStoreManagement.Pages.FeedbackPage
 
         public async Task<IActionResult> OnGet(int id)
         {
-            if (feedbackService.GetAllFeedback() == null)
-            {
-                return NotFound();
-            }
-
             var feedback = feedbackService.GetFeedbackById(id);
             if (feedback == null)
             {
                 return NotFound();
             }
+            FeedbackId = feedback.FeedbackId;
             Feedback = feedback;
             Products = productService.GetAllProducts().ToList();
             Accounts = accountService.GetAllAccounts().ToList();
             return Page();
         }
 
+
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPost()
         {
+            var accountid = HttpContext.Session.GetInt32("AccountId");
             Feedback feedback = new Feedback();
-            feedback.CustomerId = AccountId;
+            feedback.FeedbackId = Feedback.FeedbackId;
+            feedback.CustomerId = accountid;
             feedback.ProductId = ProductId;
             feedback.FeedbackText = FeedbackText;
             feedback.FeedbackDate = DateTime.Now;
             try
             {
                 bool check = false;
-                if (ModelState.IsValid)
-                {
-                    check = feedbackService.UpdateFeedback(feedback);
-                }
+                check = feedbackService.UpdateFeedback(feedback);
                 if (check)
                 {
-                    return RedirectToPage("/Feedback");
+                    return RedirectToPage("/FeedbackPage/Feedback");
                 }
                 else
                 {
