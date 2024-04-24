@@ -1,17 +1,60 @@
 ﻿@page
-@model ToyStoreManagement.Pages.ManageProductModel
+@model ToyStoreManagement.Pages.FeedbackPage.FeedbackManagerModel
+
 @{
-    ViewData["Tittle"] = "Product Management";
+    ViewData["Title"] = "FeedbackManager";
 }
-@{
-    var session = HttpContext.Session;
-    var name = session.GetString("Name");
-    var roleId = session.GetInt32("RoleId");
-    var accountId = session.GetInt32("AccountId");
+
+@* <h1>FeedbackManager</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Feedback[0].FeedbackText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Feedback[0].FeedbackDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Feedback[0].Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Feedback[0].Product)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Feedback) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeedbackText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeedbackDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.AccountId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.ProductId)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.FeedbackId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.FeedbackId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.FeedbackId">Delete</a>
+            </td>
+        </tr>
 }
+    </tbody>
+</table> *@
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Product List</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Feedback List</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -36,70 +79,29 @@
                         </label>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6">
-                </div>
-                <div class="col-sm-12 col-md-6">
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <a href="/Products/Create" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                            Create New Product
-                        </a>
-                    </div>
-                </div>
             </div>
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Product ID: activate to sort column ascending">Product ID</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending">Name</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending">Price</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Stock Quantity: activate to sort column ascending">Stock Quantity</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Category: activate to sort column ascending">Category</th>
-                        <th>Status</th>
-                        <th></th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Feedback ID: activate to sort column ascending">Feedback ID</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Feedback Text: activate to sort column ascending">Feedback Text</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Feedback Date: activate to sort column ascending">Feedback Date</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending">Customer Name</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Product Name: activate to sort column ascending">Product Name</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var product in Model.Products)
+                    @foreach (var order in Model.Feedback)
                     {
                         <tr>
-                            <td>@product.ProductId</td>
-                            <td>@product.Name</td>
-                            <td>@product.Price</td>
-                            <td>@product.StockQuantity</td>
-                            <td>@product.Category.Name</td>
+                            <td>@order.FeedbackId</td>
+                            <td>@order.FeedbackText</td>
+                            <td>@order.FeedbackDate</td>
+                            <td>@order.Customer.Name</td>
+                            <td>@order.Product.Name</td>
                             <td>
-                                @if (product.Status == 1)
-                                {
-                                    <p style="color:green">Active</p>
-                                }
-                                else
-                                {
-                                    <p style="color:red">Block</p>
-                                }
-                            </td>
-                            <td>
-                                @if(roleId == 1)
-                                {
-                                    @if (product.Status == 1)
-                                    {
-                                        <form method="post">
-                                            <input name="Status" value="0" hidden />
-                                            <input name="ProductId" value="@product.ProductId" hidden />
-                                            <button class="btn btn-primary">Block</button>
-                                        </form>
-                                    }
-                                    else
-                                    {
-                                        <form method="post">
-                                            <input name="Status" value="1" hidden />
-                                            <input name="ProductId" value="@product.ProductId" hidden />
-                                            <button class="btn btn-primary">Active</button>
-                                        </form>
-                                    }
-                                }
-                                <a href="Products/Details?ProductId=@product.ProductId" class="btn btn-primary">View detail</a>
-                                <a href="FeedbackPage/FeedbackManager" class="btn btn-primary">View Feedback</a>
+                                <a href="/FeedbackPage/Details?FeedbackId=@order.FeedbackId" class="btn btn-primary">View detail</a>
                             </td>
                         </tr>
                     }
@@ -119,7 +121,6 @@
         </div>
     </div>
 </div>
-
 <script src="~/js/jquery.dataTables.min.js"></script>
 <script src="~/js/dataTables.bootstrap4.min.js"></script>
 <script src="~/js/datatables-demo.js"></script>
