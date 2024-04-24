@@ -10,7 +10,6 @@ namespace ToyStoreManagement.Pages
     {
         private readonly IProductService _productService;
         public IEnumerable<Product> Products { get; set; }
-        public IEnumerable<Feedback> Feedbacks { get; set; }
         public int ListNumber { get; set; }
         [BindProperty] public int ProductId { get; set; }
         [BindProperty] public int Status { get; set; }

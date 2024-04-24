@@ -10,6 +10,5 @@ namespace ToyStoreService.Interface
         public bool DeleteFeedback(int id);
         public Feedback GetFeedbackById(int id);
         public IEnumerable<Feedback> GetFeedbackByCustomerId(int customerId);
-        public IEnumerable<Feedback> GetFeedbackByProductId(int productId);
     }
 }

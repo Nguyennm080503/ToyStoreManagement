@@ -2,10 +2,10 @@
 @model ToyStoreManagement.Pages.FeedbackPage.DetailsModel
 
 @{
-    ViewData["Title"] = "Details Feedback";
+    ViewData["Title"] = "Details";
 }
 
-@* <h1>Details</h1>
+<h1>Details</h1>
 
 <div>
     <h4>Feedback</h4>
@@ -40,54 +40,4 @@
 <div>
     <a asp-page="./Edit" asp-route-id="@Model.Feedback?.FeedbackId">Edit</a> |
     <a asp-page="./Feedback">Back to List</a>
-</div> *@
-<div class="row">
-    <div class="col-12">
-        <div class="my-5">
-            <h3>New Feedback</h3>
-            <hr>
-        </div>
-        <form class="file-upload" method="post">
-            <div class="row mb-5 gx-5">
-                <div class="col-xxl-8 mb-5 mb-xxl-0">
-                    <div class="bg-secondary-soft px-4 py-5 rounded">
-                        <div class="row g-3">
-                            <h4 class="mb-4 mt-0">Feedback detail</h4>
-                            <div class="col-md-6">
-                                <label class="form-label">FeedbackText *</label>
-                                <input type="text" class="form-control" placeholder="" aria-label="FeedbackText" name="FeedbackText" value="@Model.Feedback.FeedbackText" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">FeedbackDate *</label>
-                                <input type="number" class="form-control" placeholder="" aria-label="FeedbackDate" name="FeedbackDate" value="@Model.Feedback.FeedbackDate" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Customer *</label>
-                                <select name="CustomerId" aria-controls="CustomerId" class="custom-select form-control ">
-                                    @foreach (var category in Model.Accounts)
-                                    {
-                                        <option value="@category.AccountId" selected="@Model.Feedback.Customer == @category.AccountId">@category.Name</option>
-                                    }
-                                </select>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Product *</label>
-                                <select name="ProductId" aria-controls="ProductId" class="custom-select form-control ">
-                                    @foreach (var category in Model.Products)
-                                    {
-                                        <option value="@category.ProductId" selected="@Model.Feedback.Product == @category.ProductId">@category.Name</option>
-                                    }
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="gap-3 d-md-flex justify-content-md-end text-center">
-                <p style="color:red">@Model.Feedback</p>
-                <input name="FeedbackId" value="@Model.Feedback.FeedbackId" hidden />
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg">Update Feedback</button>
-        </form>
-    </div>
 </div>

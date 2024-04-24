@@ -37,9 +37,6 @@ namespace ToyStoreRepository.Implement
         {
             return _feedbackDao.GetAll().Where(f => f.CustomerId == customerId).ToList();
         }
-        public IEnumerable<Feedback> GetFeedbackByProductId(int productId)
-        {
-            return _feedbackDao.GetAll().Where(f => f.ProductId == productId).ToList();
-        }
+
     }
 }
