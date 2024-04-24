@@ -11,5 +11,9 @@ namespace ToyStoreService.Interface
         public void DeleteProduct(int productId);
         public List<Product> GetAllProducts();
         public List<Product> SearchProducts(string? name, decimal? minPrice, decimal? maxPrice, string? category);
+<<<<<<< HEAD
+=======
+        bool UpdateQuantity(Product product);
+>>>>>>> main
     }
 }

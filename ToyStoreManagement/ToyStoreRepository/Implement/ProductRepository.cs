@@ -18,10 +18,16 @@ namespace ToyStoreRepository.Implement
         public void DeleteProduct(int productId) => _productDao.DeleteProduct(productId);
         public List<Product> GetAllProducts() => _productDao.GetAllProducts();
         public List<Product> SearchProducts(string? name, decimal? minPrice, decimal? maxPrice, string? category) => _productDao.SearchProducts(name, minPrice, maxPrice, category);
+<<<<<<< HEAD
 
         public IEnumerable<Product> GetAllProduct()
         {
             throw new NotImplementedException();
+=======
+        public bool UpdateQuantity(Product product)
+        {
+            return _productDao.Update(product);
+>>>>>>> main
         }
     }
 }

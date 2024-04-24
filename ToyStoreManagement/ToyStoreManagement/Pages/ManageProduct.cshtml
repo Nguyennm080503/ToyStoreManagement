@@ -1,0 +1,156 @@
+﻿@page
+@model ToyStoreManagement.Pages.ManageProductModel
+@{
+    ViewData["Tittle"] = "Product Management";
+}
+@{
+    var session = HttpContext.Session;
+    var name = session.GetString("Name");
+    var roleId = session.GetInt32("RoleId");
+    var accountId = session.GetInt32("AccountId");
+}
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Product List</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="dataTables_length" id="dataTable_length">
+                        <label>
+                            Show
+                            <select name="dataTable_length" aria-controls="dataTable" class="custom-select custom-select-sm form-control form-control-sm">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select> entries
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div id="dataTable_filter" class="dataTables_filter">
+                        <label>
+                            Search:<input type="search" id="searchInput" class="form-control form-control-2xl" placeholder="" aria-controls="dataTable">
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <a href="/Products/Create" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            Create New Product
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Product ID: activate to sort column ascending">Product ID</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending">Name</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending">Price</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Stock Quantity: activate to sort column ascending">Stock Quantity</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Category: activate to sort column ascending">Category</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model.Products)
+                    {
+                        <tr>
+                            <td>@product.ProductId</td>
+                            <td>@product.Name</td>
+                            <td>@product.Price</td>
+                            <td>@product.StockQuantity</td>
+                            <td>@product.Category.Name</td>
+                            <td>
+                                @if (product.Status == 1)
+                                {
+                                    <p style="color:green">Active</p>
+                                }
+                                else
+                                {
+                                    <p style="color:red">Block</p>
+                                }
+                            </td>
+                            <td>
+                                @if(roleId == 1)
+                                {
+                                    @if (product.Status == 1)
+                                    {
+                                        <form method="post">
+                                            <input name="Status" value="0" hidden />
+                                            <input name="ProductId" value="@product.ProductId" hidden />
+                                            <button class="btn btn-primary">Block</button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <form method="post">
+                                            <input name="Status" value="1" hidden />
+                                            <input name="ProductId" value="@product.ProductId" hidden />
+                                            <button class="btn btn-primary">Active</button>
+                                        </form>
+                                    }
+                                }
+                                <a href="Products/Details?ProductId=@product.ProductId" class="btn btn-primary">View detail</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-sm-12 col-md-5">
+                    <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing <span id="startEntry">1</span> to <span id="endEntry">10</span> of <span id="totalEntries">@Model.ListNumber</span> entries</div>
+                </div>
+                <div class="col-sm-12 col-md-7">
+                    <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+                        <ul class="pagination" id="paginationList">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/jquery.dataTables.min.js"></script>
+<script src="~/js/dataTables.bootstrap4.min.js"></script>
+<script src="~/js/datatables-demo.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var totalAccounts = @Model.ListNumber;
+
+        var displayLength = parseInt($("select[name='dataTable_length']").val());
+
+        var totalPages = Math.ceil(totalAccounts / displayLength);
+
+        $(".pagination").empty();
+
+        for (var i = 1; i <= totalPages; i++) {
+            if (i === 1) {
+                $(".pagination").append('<li class="paginate_button page-item active"><a href="#" aria-controls="dataTable" data-dt-idx="' + i + '" tabindex="0" class="page-link">' + i + '</a></li>');
+            } else {
+                $(".pagination").append('<li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="' + i + '" tabindex="0" class="page-link">' + i + '</a></li>');
+            }
+        }
+
+        $("select[name='dataTable_length']").change(function () {
+            displayLength = parseInt($(this).val());
+            totalPages = Math.ceil(totalAccounts / displayLength);
+            $(".pagination").empty();
+            for (var i = 1; i <= totalPages; i++) {
+                if (i === 1) {
+                    $(".pagination").append('<li class="paginate_button page-item active"><a href="#" aria-controls="dataTable" data-dt-idx="' + i + '" tabindex="0" class="page-link">' + i + '</a></li>');
+                } else {
+                    $(".pagination").append('<li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="' + i + '" tabindex="0" class="page-link">' + i + '</a></li>');
+                }
+            }
+        });
+    });
+</script>

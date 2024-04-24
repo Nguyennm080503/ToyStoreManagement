@@ -15,7 +15,7 @@ namespace ToyStoreManagement.Pages
 		[BindProperty] public string Address { get; set; }
 		[BindProperty] public string Username { get; set; }
 		[BindProperty] public string Password { get; set; }
-		[BindProperty] public string Message { get; set; }
+		public string Message { get; set; }
 
 		public CreateStaffModel(IAccountService accountService)
         {
@@ -36,6 +36,11 @@ namespace ToyStoreManagement.Pages
 			else if (!ValidatePhoneNumber(Phone))
 			{
 				Message = "Email is invalid! Fill email again.";
+				return Page();
+			}
+			else if(_accountService.GetAccountByUsername(Username) != null)
+			{
+				Message = "Username existed! Fill email again.";
 				return Page();
 			}
 			else

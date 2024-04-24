@@ -20,5 +20,12 @@ namespace ToyStoreService.Implement
         public void DeleteProduct(int productId) => _productRepository.DeleteProduct(productId);
         public List<Product> GetAllProducts() => _productRepository.GetAllProducts();
         public List<Product> SearchProducts(string? name, decimal? minPrice, decimal? maxPrice, string? category) => _productRepository.SearchProducts(name, minPrice, maxPrice, category);
+<<<<<<< HEAD
+=======
+        public bool UpdateQuantity(Product product)
+        {
+            return _productRepository.UpdateQuantity(product);
+        }
+>>>>>>> main
     }
 }

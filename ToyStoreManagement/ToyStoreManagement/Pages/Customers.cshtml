@@ -32,7 +32,7 @@
                 <div class="col-sm-12 col-md-6">
                     <div id="dataTable_filter" class="dataTables_filter">
                         <label>
-                            Search:<input type="search" class="form-control form-control-2xl" placeholder="" aria-controls="dataTable">
+                            Search:<input type="search" id="searchInput" class="form-control form-control-2xl" placeholder="" aria-controls="dataTable">
                         </label>
                     </div>
                 </div>
@@ -40,10 +40,10 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Account ID</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Name</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Email</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Address</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Account ID: activate to sort column ascending">Account ID</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending">Name</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending">Email</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending">Address</th>
                         <th>Status</th>
                         <th></th>
                     </tr>
@@ -66,21 +66,24 @@
                                 }
                             </td>
                             <td>
-                                @if (account.Status == 1)
+                                @if (roleId == 1)
                                 {
-                                    <form method="post">
-                                        <input name="Status" value="0" hidden />
-                                        <input name="AccountId" value="@account.AccountId" hidden />
-                                        <button class="btn btn-primary">Block</button>
-                                    </form>
-                                }
-                                else
-                                {
-                                    <form method="post">
-                                        <input name="Status" value="1" hidden />
-                                        <input name="AccountId" value="@account.AccountId" hidden />
-                                        <button class="btn btn-primary">Active</button>
-                                    </form>
+                                    @if (account.Status == 1)
+                                    {
+                                        <form method="post">
+                                            <input name="Status" value="0" hidden />
+                                            <input name="AccountId" value="@account.AccountId" hidden />
+                                            <button class="btn btn-primary">Block</button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <form method="post">
+                                            <input name="Status" value="1" hidden />
+                                            <input name="AccountId" value="@account.AccountId" hidden />
+                                            <button class="btn btn-primary">Active</button>
+                                        </form>
+                                    }
                                 }
                             </td>
                         </tr>

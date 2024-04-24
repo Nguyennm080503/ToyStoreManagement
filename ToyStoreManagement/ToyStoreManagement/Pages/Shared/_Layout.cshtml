@@ -29,7 +29,7 @@
         <header>
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
                 <div class="container">
-                    <a class="navbar-brand" asp-area="" asp-page="/Index">ToyStoreManagement</a>
+                    <a class="navbar-brand" asp-area="" asp-page="/Index">Toy Store</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -40,10 +40,10 @@
                                     <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Toy">Toy</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Toy/Index">Toy</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Order">Cart</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Cart/Index">Cart</a>
                                 </li>
                             @if (name == null)
                             {
@@ -72,33 +72,35 @@
     }
     @if (roleId == 1 || roleId == 2)
     {
-            <div id="wrapper">
+        <div id="wrapper">
 
-                <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-                    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                        <div class="sidebar-brand-text mx-3">Admin Dashboard</div>
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                    <div class="sidebar-brand-text mx-3">Admin Dashboard</div>
+                </a>
+
+                <hr class="sidebar-divider my-0">
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Dashboard">
+                        <span>Dashboard</span>
                     </a>
+                </li>
 
-                    <hr class="sidebar-divider my-0">
+                <hr class="sidebar-divider">
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/Dashboard">
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-
-                    <hr class="sidebar-divider">
-
-                    <div class="sidebar-heading">
-                        Management Account
-                    </div>
-
+                <div class="sidebar-heading">
+                    Management Account
+                </div>
+                @if (roleId == 1)
+                {
                     <li class="nav-item">
-                    <a class="nav-link collapsed" href="/Staffs">
+                        <a class="nav-link collapsed" href="/Staffs">
                             <span>Management Staff</span>
                         </a>
                     </li>
+                }
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="/Customers">
                         <span>Management Customer</span>
@@ -112,7 +114,7 @@
                     </div>
 
                     <li class="nav-item">
-                        <a class="nav-link " href="#" >
+                        <a class="nav-link " href="/ManageProduct" >
                             <span>Management Product</span>
                         </a>
                     </li>
@@ -122,9 +124,8 @@
                 <div class="sidebar-heading">
                     Order
                 </div>
-                    <!-- Nav Item - Charts -->
                     <li class="nav-item">
-                        <a class="nav-link" href="charts.html">
+                        <a class="nav-link" href="/ManageOrder">
                             <span>Order Management</span>
                         </a>
                     </li>
