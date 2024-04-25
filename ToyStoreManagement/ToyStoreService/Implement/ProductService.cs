@@ -22,5 +22,6 @@ namespace ToyStoreService.Implement
         {
             return _productRepository.UpdateQuantity(product);
         }
+        public List<Product> GetAllProductsHome() => _productRepository.GetAllProductsHome();
     }
 }

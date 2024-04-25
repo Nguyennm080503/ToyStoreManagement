@@ -1,31 +1,51 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using BusinessObjects.Models;
-using ToyStoreService.Interface;
-using ToyStoreManagement.View_Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
+using ToyStoreManagement.View_Models;
+using ToyStoreService.Implement;
+using ToyStoreService.Interface;
+using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
 
 namespace ToyStoreManagement.Pages.Toy
 {
-    public class IndexModel : PageModel
+    public class ListModel : PageModel
     {
-        private readonly IProductService productService;
-
-        public IndexModel(IProductService service)
+        private readonly IProductService _productService;
+        private readonly ICategoryService _categoryService;
+        public ListModel(IProductService productService, ICategoryService categoryService)
         {
-            productService = service;
+            _productService = productService;
+            _categoryService = categoryService;
         }
 
-        public IList<Product> Product { get; set; } = default!;
+        public string Keyword { get; set; }
+        public decimal? MinPrice { get; set; }
+        public decimal? MaxPrice { get; set; }
+        public string Category { get; set; }
+        public IList<Product> Products { get; set; }
+        public IEnumerable<Category> Categories { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string? keyword, decimal? minPrice, decimal? maxPrice, string? category)
         {
+            Categories = _categoryService.GetAllCategory();
+            Keyword = keyword;
+            MinPrice = minPrice;
+            MaxPrice = maxPrice;
+            Category = category;
 
-            Product = (IList<Product>)productService.GetAllProducts();
+            if (!string.IsNullOrEmpty(Keyword) || MinPrice.HasValue || MaxPrice.HasValue || !string.IsNullOrEmpty(Category))
+            {
+                Products = _productService.SearchProducts(Keyword, MinPrice, MaxPrice, Category);
+            }
+            else
+            {
+                Products = _productService.GetAllProductsHome();
+            }
         }
         public async Task<IActionResult> OnPostAddToCartAsync([FromForm] int productId)
         {
-            Product product = productService.GetProductById(productId);
+            Product product = _productService.GetProductById(productId);
             //Check validation for product
             if (product == null)
             {
@@ -100,6 +120,4 @@ namespace ToyStoreManagement.Pages.Toy
         }
     }
 }
-
 #endregion
-

@@ -11,6 +11,8 @@ namespace ToyStoreRepository.Interface
         public List<Product> GetAllProducts();
         public List<Product> SearchProducts(string? name, decimal? minPrice, decimal? maxPrice, string? category);
         bool UpdateQuantity (Product product);
-        
+        public List<Product> GetAllProductsHome();
+
+
     }
 }

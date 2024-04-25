@@ -74,6 +74,10 @@ namespace ToyStoreDao
             }
 
             return query.ToList();
-        }        
+        }
+        public List<Product> GetAllProductsHome()
+        {
+            return _dbContext.Products.Where(x=>x.Status ==1).Include(c => c.Category).ToList();
+        }
     }
 }
