@@ -78,7 +78,7 @@
                                     <p style="color:red">Block</p>
                                 }
                             </td>
-                            <td>
+                            <td style="width:250px">
                                 @if(roleId == 1)
                                 {
                                     @if (product.Status == 1)
@@ -99,6 +99,8 @@
                                     }
                                 }
                                 <a href="Products/Details?ProductId=@product.ProductId" class="btn btn-primary">View detail</a>
+                            </td>
+                            <td style="width:200px">
                                 <a href="FeedbackPage/FeedbackManager?ProductId=@product.ProductId" class="btn btn-primary">View Feedback</a>
                             </td>
                         </tr>

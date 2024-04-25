@@ -33,13 +33,13 @@
 
     <link rel="stylesheet" href="~/lib2/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="~/css2/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ToyStoreManagement.styles.css" asp-append-version="true" />
-    <link href="~/css2/all.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/all.min.css" rel="stylesheet" type="text/css" />
 
 
-    <link href="~/css2/sb-admin-2.min.css" rel="stylesheet" />
-    <link href="~/css2/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="~/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
 
 
 
@@ -172,18 +172,20 @@
                 }
 
      @if(roleId != 1 && roleId != 2){
+         <main role="main">
             @RenderBody()
+         </main>
      }
      @if(roleId != 1 && roleId != 2){
-    <footer class="border-top footer text-muted">
+    <footer>
         <div class="container">
             &copy; 2024 - ToyStoreManagement - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
      }
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib2/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib2/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/jquery.min.js"></script>
     <script src="~/js/sb-admin-2.min.js"></script>
