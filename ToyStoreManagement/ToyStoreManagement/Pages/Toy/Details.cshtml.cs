@@ -16,6 +16,7 @@ namespace ToyStoreManagement.Pages.Toy
     public class DetailsModel : PageModel
     {
         private readonly IProductService _service;
+        private readonly IFeedbackService _feedbackService;
         private readonly ICategoryService _categoryService;
 
         [BindProperty(SupportsGet = true)]
@@ -23,13 +24,15 @@ namespace ToyStoreManagement.Pages.Toy
         public string Message { get; set; }
         public IEnumerable<Category> Categories { get; set; }
 
-        public DetailsModel(IProductService service, ICategoryService categoryService)
+        public DetailsModel(IProductService service, ICategoryService categoryService, IFeedbackService feedbackService)
         {
             _service = service;
             _categoryService = categoryService;
+            _feedbackService = feedbackService;
         }
 
         public Product Product { get; set; } = default!;
+        public IEnumerable<Feedback> Feedback { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -43,10 +46,16 @@ namespace ToyStoreManagement.Pages.Toy
             {
                 return NotFound();
             }
-            else
+            Product = product;
+
+            var feedback = _feedbackService.GetFeedbackByProductId((int)id);
+
+            if (feedback == null)
             {
-                Product = product;
+                Feedback = new List<Feedback>();
+                Message = "No feedback available for this product.";
             }
+            Feedback = feedback;
             return Page();
         }
         public async Task<IActionResult> OnPostAddToCartAsync([FromForm] int productId)
