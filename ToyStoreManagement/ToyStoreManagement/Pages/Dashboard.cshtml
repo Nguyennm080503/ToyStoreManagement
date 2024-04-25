@@ -107,8 +107,16 @@
 </div>
 
 <script>
-    var totalMoneyEachMonth = @Html.Raw(Json.Serialize(Model.TotalMoneyEachMonth));
-    var CategoryName = @Html.Raw(Json.Serialize(Model.ProductCountEachCategory));
+    var pieChartData = {
+        labels: @Html.Raw(Json.Serialize(Model.ProductCountEachCategory.Select(x => x.CategoryName))),
+        data: @Html.Raw(Json.Serialize(Model.ProductCountEachCategory.Select(x => x.TotalProduct)))
+        };
+</script>
+<script>
+    var areaChartData = {
+        labels: @Html.Raw(Json.Serialize(Model.TotalMoneyEachMonth.Select(x => x.OrderDate.Value.Month))),
+        data: @Html.Raw(Json.Serialize(Model.TotalMoneyEachMonth.Select(x => x.TotalAmount)))
+        };
 </script>
 <script src="~/js/chart-area-demo.js"></script>
 <script src="~/js/Chart.min.js"></script>

@@ -46,6 +46,7 @@
                         <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Total Amount: activate to sort column ascending">Total Amount</th>
                         <th>Status</th>
                         <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -59,11 +60,11 @@
                             <td>
                                 @if (order.Status == 1)
                                 {
-                                    <p style="color:yellow">Pending</p>
+                                    <p style="color:yellowgreen">Pending</p>
                                 }
                                 @if (order.Status == 2)
                                 {
-                                    <p style="color:antiquewhite">Preparing</p>
+                                    <p style="color:brown">Preparing</p>
                                 }
                                 @if (order.Status == 3)
                                 {
@@ -79,7 +80,7 @@
                                     {
                                         <form method="post">
                                             <input name="Status" value="2" hidden />
-                                        <input name="ProductId" value="@order.OrderId" hidden />
+                                        <input name="OrderId" value="@order.OrderId" hidden />
                                         <button class="btn btn-primary">Preparing</button>
                                         </form>
                                     }
@@ -87,7 +88,7 @@
                                     {
                                         <form method="post">
                                             <input name="Status" value="3" hidden />
-                                        <input name="ProductId" value="@order.OrderId" hidden />
+                                        <input name="OrderId" value="@order.OrderId" hidden />
                                         <button class="btn btn-primary">Delivering</button>
                                         </form>
                                     }
@@ -95,11 +96,13 @@
                                 {
                                     <form method="post">
                                         <input name="Status" value="4" hidden />
-                                        <input name="ProductId" value="@order.OrderId" hidden />
+                                        <input name="OrderId" value="@order.OrderId" hidden />
                                         <button class="btn btn-primary">Paid</button>
                                     </form>
                                 }
-                                <a href="/OrderDetails?OrderId=@order.OrderId" class="btn btn-primary">View detail</a>
+                                </td>
+                                <td>
+                                <a href="/OrderDetail?OrderId=@order.OrderId" class="btn btn-primary">View detail</a>
                             </td>
                         </tr>
                     }

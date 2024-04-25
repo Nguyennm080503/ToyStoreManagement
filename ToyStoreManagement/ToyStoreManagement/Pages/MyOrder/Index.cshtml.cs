@@ -21,14 +21,15 @@ namespace ToyStoreManagement.Pages.MyOrder
             
         }
         public IList<Order> Order { get; set; } = default!;
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
             var id = HttpContext.Session.GetInt32("AccountId"); 
             if(id == null)
             {
-                RedirectToPage("/Login");
+                return RedirectToPage("/Login");
             }
             Order = (IList<Order>)orderService.GetOrderByCustomerId((int)id);
+            return Page();
         }
 
 

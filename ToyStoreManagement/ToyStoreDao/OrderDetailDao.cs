@@ -24,7 +24,7 @@ namespace ToyStoreDao
 
         public IEnumerable<OrderDetail> GetAllOrderDetail(int id)
         {
-            return (IEnumerable<OrderDetail>)_dbContext.Orders.Where(x => x.OrderId == id).ToList();
+            return _dbContext.OrderDetails.Include(x => x.Order).Include(x => x.Product).Where(x => x.OrderId == id).ToList();
         }
     }
 }

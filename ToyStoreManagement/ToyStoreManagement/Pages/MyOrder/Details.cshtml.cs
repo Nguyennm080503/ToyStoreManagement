@@ -8,34 +8,36 @@ using Microsoft.EntityFrameworkCore;
 using BusinessObjects.Models;
 using ToyStoreRepository.Interface;
 using ToyStoreService.Interface;
+using ToyStoreService.Implement;
 
 namespace ToyStoreManagement.Pages.MyOrder
 {
     public class DetailsModel : PageModel
     {
         private readonly IOrderDetailService detailService;
+        private readonly IOrderService orderService;
 
-        public DetailsModel(IOrderDetailService _detailService)
+        public DetailsModel(IOrderDetailService _detailService, IOrderService _orderService)
         {
             detailService = _detailService;
+            orderService = _orderService;
         }
+
+        public Order Order { get; set; }
+        public IEnumerable<OrderDetail> OrderDetails { get; set; }
 
         public IList<OrderDetail> OrderDetail { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int id)
         {
-            string role = HttpContext.Session.GetString("ROLE");
-            if (string.IsNullOrEmpty(role))
-            {
-                return RedirectToPage("/Error");
-            }
+            string accountid = HttpContext.Session.GetString("AccountId");
 
-            if (id == null)
+            if (accountid == null)
             {
-                return NotFound();
+                return RedirectToPage("/Login");
             }
-            OrderDetail = detailService.GetAllOrderDetail(id).ToList();
-
+            Order = orderService.GetOrder(id);
+            OrderDetails = detailService.GetAllOrderDetail(id);
             return Page();
         }
     }

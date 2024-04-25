@@ -32,22 +32,30 @@ namespace ToyStoreManagement.Pages
         public IEnumerable<Order> TotalMoneyEachMonth { get; set; }
         public async Task<IActionResult> OnGet()
         {
-            CustomerNumber = _accountService.GetAllCustomerAccounts().Count();
-            ProductNumber = _productService.GetAllProducts().Count();
-            MoneyTotal = (decimal)_orderService.GetAllOrder().Sum(x => x.TotalAmount);
-            FeedbackNumber = _feedbackService.GetAllFeedback().Count();
-            ProductCountEachCategory = _productService.GetAllProducts().GroupBy(x => x.CategoryId).Select(g => new ProductCount
+            var roleId = HttpContext.Session.GetInt32("RoleId");
+            if (roleId == 1 || roleId == 2)
             {
-                CategoryName = _categoryService.GetAllCategory().Where(x => x.CategoryId == g.Key).FirstOrDefault().Name,
-                TotalProduct = g.Count(),
-            }).ToList();
-            TotalMoneyEachMonth = _orderService.GetAllOrder().GroupBy(x => x.OrderDate.Value.Month).Select(g => new Order
+                CustomerNumber = _accountService.GetAllCustomerAccounts().Count();
+                ProductNumber = _productService.GetAllProducts().Count();
+                MoneyTotal = (decimal)_orderService.GetAllOrder().Where(x => x.Status == 4).Sum(x => x.TotalAmount);
+                FeedbackNumber = _feedbackService.GetAllFeedback().Count();
+                ProductCountEachCategory = _productService.GetAllProducts().GroupBy(x => x.CategoryId).Select(g => new ProductCount
+                {
+                    CategoryName = _categoryService.GetAllCategory().Where(x => x.CategoryId == g.Key).FirstOrDefault().Name,
+                    TotalProduct = g.Count(),
+                }).ToList();
+                TotalMoneyEachMonth = _orderService.GetAllOrder().GroupBy(x => x.OrderDate.Value.Month).Select(g => new Order
+                {
+                    OrderDate = new DateTime(1, g.Key, 1),
+                    TotalAmount = g.Sum(x => x.TotalAmount),
+                }).ToList();
+                FeedbackNumber = _feedbackService.GetAllFeedback().Count();
+                return Page();
+            }
+            else
             {
-                OrderDate = new DateTime(1, g.Key, 1),
-                TotalAmount = g.Sum(x => x.TotalAmount),
-            }).ToList();
-            FeedbackNumber = _feedbackService.GetAllFeedback().Count();
-            return Page();
+                return RedirectToPage("/Login");
+            }
         }
     }
 }

@@ -8,5 +8,6 @@ namespace ToyStoreService.Interface
         Order GetOrder(int id);
         bool AddOrder(Order ord);
         IEnumerable<Order> GetOrderByCustomerId(int customerId);
+        bool UpdateOrder(Order ord);
     }
 }

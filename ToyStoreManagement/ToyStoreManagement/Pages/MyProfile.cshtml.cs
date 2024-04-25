@@ -23,7 +23,7 @@ namespace ToyStoreManagement.Pages
         public async Task<IActionResult> OnGet()
         {
             var idaccount = HttpContext.Session.GetInt32("AccountId");
-            if(idaccount != 0)
+            if(idaccount != null)
             {
                 Account = _accountService.GetProfileAccount((int)idaccount);
                 return Page();
@@ -36,7 +36,7 @@ namespace ToyStoreManagement.Pages
         public async Task<IActionResult> OnPost()
         {
             var idaccount = HttpContext.Session.GetInt32("AccountId");
-            if (idaccount != 0)
+            if (idaccount != null)
             {
                 Account = _accountService.GetProfileAccount((int)idaccount);
                 Account.Phone = Phone;

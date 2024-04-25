@@ -27,14 +27,9 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   return s.join(dec);
 }
 
-var labels = [];
-var data = [];
+var labels = areaChartData.labels;
+var data = areaChartData.data;
 
-totalMoneyEachMonth.forEach(order => {
-    var month = order.OrderDate.getMonth() + 1; 
-    labels.push(month);
-    data.push(order.TotalAmount);
-});
 
 var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {

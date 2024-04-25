@@ -52,16 +52,16 @@
                             @switch (item.Status)
                             {
                                 case 1:
-                                    <label class="text-info">To Receive</label>
+                                    <p style="color:yellowgreen">Pending</p>
                                     break;
                                 case 2:
-                                    <label class="text-success">Completed</label>
+                                    <p style="color:brown">Preparing</p>
                                     break;
                                 case 3:
-                                    <label class="text-danger">Cancel</label>
+                                    <strong style="color:aqua">Delivering</strong>
                                     break;
                                 default:
-                                    <label class="text-muted">To Ship</label>
+                                    <p style="color:green">Payment has been made</p>
                                     break;
                             }
                         </td>

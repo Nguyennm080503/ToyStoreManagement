@@ -51,10 +51,11 @@
                     <tr>
                         <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Product ID: activate to sort column ascending">Product ID</th>
                         <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending">Name</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending">Price</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending">Price ($)</th>
                         <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Stock Quantity: activate to sort column ascending">Stock Quantity</th>
                         <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Category: activate to sort column ascending">Category</th>
                         <th>Status</th>
+                        <th></th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -78,12 +79,12 @@
                                     <p style="color:red">Block</p>
                                 }
                             </td>
-                            <td style="width:250px">
+                            <td>
                                 @if(roleId == 1)
                                 {
                                     @if (product.Status == 1)
                                     {
-                                        <form method="post">
+                                            <form method="post" style="width:80px">
                                             <input name="Status" value="0" hidden />
                                             <input name="ProductId" value="@product.ProductId" hidden />
                                             <button class="btn btn-primary">Block</button>
@@ -91,13 +92,15 @@
                                     }
                                     else
                                     {
-                                        <form method="post">
+                                            <form method="post" style="width:80px">
                                             <input name="Status" value="1" hidden />
                                             <input name="ProductId" value="@product.ProductId" hidden />
-                                            <button class="btn btn-primary">Active</button>
+                                            <button class="btn btn-primary" >Active</button>
                                         </form>
                                     }
                                 }
+                                </td>
+                                <td>
                                 <a href="Products/Details?ProductId=@product.ProductId" class="btn btn-primary">View detail</a>
                             </td>
                             <td style="width:200px">
@@ -157,4 +160,11 @@
             }
         });
     });
+</script>
+<script type="text/javascript">
+    window.onload = function () {
+        if ('@TempData["Message"]' != "") {
+            alert('@TempData["Message"]');
+        }
+    };
 </script>

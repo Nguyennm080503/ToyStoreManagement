@@ -111,7 +111,7 @@ namespace ToyStoreManagement.Pages.Cart
                 {
                     
                     CustomerId = acc.AccountId,
-                    TotalAmount = TotalPrice / 1000,
+                    TotalAmount = TotalPrice,
                     OrderDate = DateTime.Now,
                     Address = ShippingAddress,
                     Status = 1,

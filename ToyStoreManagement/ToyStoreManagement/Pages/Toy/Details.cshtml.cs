@@ -19,6 +19,7 @@ namespace ToyStoreManagement.Pages.Toy
         private readonly IFeedbackService _feedbackService;
         private readonly ICategoryService _categoryService;
 
+
         [BindProperty(SupportsGet = true)]
         public int ProductId { get; set; }
         public string Message { get; set; }
@@ -33,6 +34,14 @@ namespace ToyStoreManagement.Pages.Toy
 
         public Product Product { get; set; } = default!;
         public IEnumerable<Feedback> Feedback { get; set; }
+
+        [BindProperty]
+        public int productId { get; set; }
+
+        [BindProperty]
+        public string FeedbackText { get; set; }
+        [BindProperty]
+        public DateTime FeedbackDate { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -114,6 +123,34 @@ namespace ToyStoreManagement.Pages.Toy
             }
 
             return RedirectToPage("./Details", new { id = productId });
+        }
+
+        public async Task<IActionResult> OnPostAddFeedbackAsync()
+        {
+            var accountid = HttpContext.Session.GetInt32("AccountId");
+            Feedback feedback = new Feedback();
+            feedback.CustomerId = accountid;
+            feedback.ProductId = productId;
+            feedback.FeedbackText = FeedbackText;
+            feedback.FeedbackDate = DateTime.Now;
+            try
+            {
+                bool check = false;
+                check = _feedbackService.CreateFeedback(feedback);
+                if (check)
+                {
+                    return RedirectToPage("./Details", new { id = productId });
+                }
+                else
+                {
+                    return RedirectToPage("Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+                return RedirectToPage("Error");
+            }
         }
     }
 }

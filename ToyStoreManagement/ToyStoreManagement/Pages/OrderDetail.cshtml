@@ -35,7 +35,7 @@
                 <h6 class="mb-0">Address</h6>
             </div>
             <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control" value="@Model.Order.Customer.Address" readonly>
+                <input type="text" class="form-control" value="@Model.Order.Address" readonly>
             </div>
         </div>
     </div>
@@ -44,7 +44,7 @@
 <div class="container px-3 my-5 clearfix">
     <div class="card">
         <div class="card-header">
-            <h2>Shopping Cart</h2>
+            <h2>Detail Order @Model.Order.OrderId</h2>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -87,11 +87,11 @@
                         <div class="text-large">
                                 @if (Model.Order.Status == 1)
                                 {
-                                    <strong style="color:yellow">Pending</strong>
+                                    <strong style="color:yellowgreen">Pending</strong>
                                 }
                             @if(Model.Order.Status == 2)
                             {
-                                <strong style="color:antiquewhite">Preparing</strong>
+                                <strong style="color:brown">Preparing</strong>
                             }
                             @if (Model.Order.Status == 3)
                             {

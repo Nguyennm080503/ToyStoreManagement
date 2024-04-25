@@ -24,6 +24,7 @@ namespace ToyStoreManagement.Pages
         public async Task<IActionResult> OnGet()
         {
             Order = _orderService.GetOrder(OrderId);
+            OrderDetails = _orderDetailService.GetAllOrderDetail(OrderId);
             return Page();
         }
     }

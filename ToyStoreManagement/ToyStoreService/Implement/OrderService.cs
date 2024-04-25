@@ -28,5 +28,10 @@ namespace ToyStoreService.Implement
         {
             return _orderRepository.GetOrderByCustomerId(customerId);
         }
+
+        public bool UpdateOrder(Order ord)
+        {
+           return _orderRepository.UpdateOrder(ord);
+        }
     }
 }

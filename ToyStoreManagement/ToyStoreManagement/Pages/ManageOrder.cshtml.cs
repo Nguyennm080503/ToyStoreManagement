@@ -18,7 +18,10 @@ namespace ToyStoreManagement.Pages
 		public IEnumerable<Order> Orders { get; set; }
 		public int ListNumber { get; set; }
 
-		public async Task<IActionResult> OnGet()
+        [BindProperty] public int OrderId { get; set; }
+        [BindProperty] public int Status { get; set; }
+
+        public async Task<IActionResult> OnGet()
         {
 			var roleId = HttpContext.Session.GetInt32("RoleId");
 			if (roleId == 1 || roleId == 2)
@@ -32,5 +35,18 @@ namespace ToyStoreManagement.Pages
 				return RedirectToPage("/Login");
 			}
 		}
+        public async Task<IActionResult> OnPost()
+        {
+            Orders = _orderService.GetAllOrder().OrderByDescending(x => x.OrderId);
+            ListNumber = Orders.Count();
+            var order = _orderService.GetOrder(OrderId);
+            order.Status = Status;
+            bool isUpdate = _orderService.UpdateOrder(order);
+            if (isUpdate)
+            {
+                return Page();
+            }
+            return RedirectToPage("Error");
+        }
     }
 }

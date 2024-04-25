@@ -66,6 +66,7 @@ namespace ToyStoreManagement.Pages.Products
                 product.PhotoUrlThumnail = Thumbnail;
                 product.Status = 1;
                 _service.AddProduct(product);
+                TempData["Message"] = "Create new product successfully";
                 return RedirectToPage("/ManageProduct");
             }
         }

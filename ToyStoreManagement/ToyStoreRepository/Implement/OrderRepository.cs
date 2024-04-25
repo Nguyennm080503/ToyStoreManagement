@@ -25,5 +25,10 @@ namespace ToyStoreRepository.Implement
         {
             return _orderDao.GetOrderByCustomerId(customerId);
         }
+
+        public bool UpdateOrder(Order ord)
+        {
+           return _orderDao.Update(ord);
+        }
     }
 }
