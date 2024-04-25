@@ -37,7 +37,14 @@
                             <span>✓ Miễn Phí Giao Hàng Toàn Quốc Đơn Trên 500k</span><br />
                             <span>✓ Giao Hàng Hòa Tốc 4 Tiếng</span>
                         </div>
-                    </div>                  
+                    </div>
+</form>
+                    <div class="container">
+                        <form method="post" asp-page-handler="AddToCart">
+                            <input type="hidden" name="productId" value="@Model.Product.ProductId" />
+                            <button class="btn btn-primary" type="submit">Add to cart</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -72,13 +79,8 @@
             </table>
         </div>
     </div>
-</form>
-<div class="container">
-    <form method="post" asp-page-handler="AddToCart">
-        <input type="hidden" name="productId" value="@Model.Product.ProductId" />
-        <button class="btn btn-primary" type="submit">Add to cart</button>
-    </form>
-</div>
+
+
 <script type="text/javascript">
     window.onload = function () {
         if ('@TempData["Message"]' != "") {
