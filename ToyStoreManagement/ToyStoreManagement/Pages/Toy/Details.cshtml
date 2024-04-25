@@ -49,6 +49,27 @@
                     <p>@Model.Product.Description</p>
                 </div>
             </div>
+            <h3>Feedback</h3>
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending">Customer Name</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Feedback Date: activate to sort column ascending">Feedback Date</th>
+                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Feedback Text: activate to sort column ascending">Feedback Text</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var feedback in Model.Feedback)
+                    {
+                        <tr>
+                            <td>@feedback.Customer.Name</td>
+                            <td>@feedback.FeedbackDate</td>
+                            <td>@feedback.FeedbackText</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
 </form>
