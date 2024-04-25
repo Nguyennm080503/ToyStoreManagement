@@ -1,0 +1,184 @@
+﻿@page
+@model ToyStoreManagement.Pages.Toy.ListModel
+@{
+}
+<header>
+    <nav>
+        <form method="get">
+            <div class="form-row mb-3">
+                <div class="col-md-4 offset-md-2 text-center">
+                    <input type="text" class="form-control" placeholder="Enter keyword" name="keyword" />
+                </div>
+                <div class="col-md-2 offset-md-2">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </form>
+    </nav>
+</header>
+
+<main>
+    <aside>
+
+            <ul>
+                <li><a href="#">Price</a></li>
+            <li>
+                <input type="checkbox" id="option1" name="price" value="under200k" @(Model.MinPrice.HasValue && Model.MinPrice < 200000 ? "checked" : "") />
+                <label for="option1">Dưới 200.000đ</label>
+                </li>
+            <form method="get"> <input type="hidden" name="minPrice" value="200000" /></form>
+               
+        
+             
+           
+                <li>
+                    <input type="checkbox" id="option2" name="price" value="200k-500k" @(Model.MinPrice.HasValue && Model.MinPrice >= 200000 && Model.MaxPrice.HasValue && Model.MaxPrice <= 500000 ? "checked" : "") />
+                    <label for="option2">200.000đ - 500.000đ</label>
+                </li>
+                <!-- Add more price range checkboxes here -->
+                <li><a href="#">Category</a></li>
+                @foreach (var category in Model.Categories)
+                {
+                    <li>
+                        <input type="checkbox" id="@category.CategoryId" name="category" value="@category.CategoryId" @(Model.Category == category.CategoryId.ToString() ? "checked" : "") />
+                        <label for="@category.CategoryId">@category.Name</label>
+                    </li>
+                }
+            
+            </ul>
+   
+    </aside>
+    <section>
+        <div class="product-grid">
+            @foreach (var item in Model.Products)
+            {
+                <div class="product-card">
+                        <form method="post" asp-page-handler="AddToCart">
+                        <input type="hidden" name="productId" value="@item.ProductId" />
+                    <a href="/Toy/Details?id=@item.ProductId">
+                        <div class="row">
+                            <div class="col-12">
+                                <img src="~/images/@Html.DisplayFor(modelItem => item.PhotoUrlThumnail)" />
+                            </div>
+                            <div class="col-12" product-name style="min-height: 50px;">
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </div>
+                            <div class="col-12" style="color:red; text-align: left; font-weight: bold; font-size: 20px;">
+                                @Html.DisplayFor(modelItem => item.Price) $
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" style="width:300px" type="submit">Add to cart</button>
+                            </div>
+                        </div>
+                    </a>
+                    </form>
+                </div>
+            }
+        </div>
+
+    </section>
+</main>
+
+
+}
+<style>
+    {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    /* Header and navigation */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+    nav form {
+        margin-left: auto;
+    }
+
+    /* Main content */
+    main {
+        display: flex;
+        padding: 20px;
+    }
+
+    aside {
+        width: 20%;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+
+        aside ul {
+            list-style-type: none;
+        }
+
+            aside ul li a {
+                text-decoration: none;
+                color: #333;
+            }
+
+    section {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    .product-card {
+        background-color: #f2f2f2;
+        padding: 20px;
+        text-align: center;
+    }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+    .price {
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+</style>
+
+<script type="text/javascript">
+    window.onload = function () {
+        if ('@TempData["Message"]' != "") {
+            alert('@TempData["Message"]');
+        }
+    };
+</script>

@@ -17,9 +17,7 @@ namespace ToyStoreRepository.Implement
         public void DeleteProduct(int productId) => _productDao.DeleteProduct(productId);
         public List<Product> GetAllProducts() => _productDao.GetAllProducts();
         public List<Product> SearchProducts(string? name, decimal? minPrice, decimal? maxPrice, string? category) => _productDao.SearchProducts(name, minPrice, maxPrice, category);
-        public bool UpdateQuantity(Product product)
-        {
-            return _productDao.Update(product);
-        }
+        public bool UpdateQuantity(Product product) => _productDao.Update(product);
+        public List<Product> GetAllProductsHome() =>_productDao.GetAllProductsHome();
     }
 }
